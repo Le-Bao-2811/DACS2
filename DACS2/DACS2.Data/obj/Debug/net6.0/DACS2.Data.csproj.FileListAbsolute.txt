@@ -1,0 +1,17 @@
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\DACS2.Data.csproj.AssemblyReference.cache
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\DACS2.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\DACS2.Data.AssemblyInfoInputs.cache
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\DACS2.Data.AssemblyInfo.cs
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\DACS2.Data.csproj.CoreCompileInputs.cache
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\bin\Debug\net6.0\DACS2.Data.deps.json
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\bin\Debug\net6.0\DACS2.Data.runtimeconfig.json
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\bin\Debug\net6.0\DACS2.Data.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\bin\Debug\net6.0\DACS2.Data.pdb
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\bin\Debug\net6.0\DACS2.Share.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\bin\Debug\net6.0\DACS2.Share.pdb
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\DACS2.Data.csproj.CopyComplete
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\DACS2.Data.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\refint\DACS2.Data.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\DACS2.Data.pdb
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\DACS2.Data.genruntimeconfig.cache
+D:\DACS2\BE\DACS2\DACS2\DACS2.Data\obj\Debug\net6.0\ref\DACS2.Data.dll

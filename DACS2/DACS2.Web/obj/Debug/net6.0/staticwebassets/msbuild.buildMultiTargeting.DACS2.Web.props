@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DACS2.Web.props" />
+</Project>

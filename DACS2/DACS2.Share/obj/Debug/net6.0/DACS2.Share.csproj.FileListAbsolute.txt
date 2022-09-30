@@ -1,0 +1,12 @@
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\bin\Debug\net6.0\DACS2.Share.deps.json
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\bin\Debug\net6.0\DACS2.Share.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\bin\Debug\net6.0\DACS2.Share.pdb
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\obj\Debug\net6.0\DACS2.Share.csproj.AssemblyReference.cache
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\obj\Debug\net6.0\DACS2.Share.GeneratedMSBuildEditorConfig.editorconfig
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\obj\Debug\net6.0\DACS2.Share.AssemblyInfoInputs.cache
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\obj\Debug\net6.0\DACS2.Share.AssemblyInfo.cs
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\obj\Debug\net6.0\DACS2.Share.csproj.CoreCompileInputs.cache
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\obj\Debug\net6.0\DACS2.Share.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\obj\Debug\net6.0\refint\DACS2.Share.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\obj\Debug\net6.0\DACS2.Share.pdb
+D:\DACS2\BE\DACS2\DACS2\DACS2.Share\obj\Debug\net6.0\ref\DACS2.Share.dll
