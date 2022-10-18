@@ -1,0 +1,55 @@
+﻿@model IEnumerable<DACS2.Web.Areas.Admin.ViewModel.News.ListNewsVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (User.IsInPermission(AuthConst.News.CREATE))
+{
+    <div class="my-2">
+        <a  class="btn btn-primary" asp-action="Create" >
+            <i class="fas fa-plus-circle"></i> &nbsp; Thêm mới vai trò
+        </a>
+    </div>
+}
+
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tiêu đề</th>
+                <th>Hình ảnh</th>
+                <th>Thể loại </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="fit">@item.Id</td>
+                    <td>@item.Title</td>
+                    <td><img style="width:50px;height:30px" src="/img/news/@item.pathImg" /></td>
+                    <td>@item.CategoryNew</td>
+                    <td class="fit">
+                        @if (User.IsInPermission(AuthConst.News.DELETE))
+                        {
+                            <a asp-action="Delete" asp-route-id="@item.Id"
+                               class="btn btn-outline-secondary btn-sm"><i class="fas fa-trash"></i></a>
+                        }
+                        @if (User.IsInPermission(AuthConst.News.UPDATE))
+                        {
+
+                            <a class="btn btn-outline-secondary btn-sm" asp-action="Update" asp-route-id="@item.Id" >
+                                <i class="fas fa-pen"></i>
+                            </a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<partial name="_Pager" />

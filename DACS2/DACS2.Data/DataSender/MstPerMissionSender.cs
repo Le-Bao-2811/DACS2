@@ -26,7 +26,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.RoleTable,
                     GroupName = groupName,
                     Desc = "Thêm quyền",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -35,7 +35,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.RoleTable,
                     GroupName = groupName,
                     Desc = "Xóa quyền",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -44,7 +44,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.RoleTable,
                     GroupName = groupName,
                     Desc = "Sửa quyền",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -53,7 +53,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.RoleTable,
                     GroupName = groupName,
                     Desc = "Xem chi tiết quyền",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -62,7 +62,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.RoleTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách quyền",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -77,7 +77,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.CategoryNewsTable,
                     GroupName = groupName,
                     Desc = "Thêm thể loại tin thức",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -86,7 +86,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.CategoryNewsTable,
                     GroupName = groupName,
                     Desc = "Xóa thể loại tin thức",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -95,7 +95,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.CategoryNewsTable,
                     GroupName = groupName,
                     Desc = "Sửa thể loại tin thức",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                
                 new MstPerMission
@@ -105,7 +105,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.CategoryNewsTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách thể loại tin thức",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -120,7 +120,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.CategoryProductTable,
                     GroupName = groupName,
                     Desc = "Thêm thể loại sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -129,7 +129,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.CategoryProductTable,
                     GroupName = groupName,
                     Desc = "Xóa thể loại sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -138,7 +138,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.CategoryProductTable,
                     GroupName = groupName,
                     Desc = "Sửa thể loại sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -148,7 +148,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.CategoryProductTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách thể loại sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -163,7 +163,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.ColorTable,
                     GroupName = groupName,
                     Desc = "Thêm màu sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -172,7 +172,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.ColorTable,
                     GroupName = groupName,
                     Desc = "Xóa màu sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -181,7 +181,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.ColorTable,
                     GroupName = groupName,
                     Desc = "Sửa màu sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -191,7 +191,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.ColorTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách màu sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -206,7 +206,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.DesignsTable,
                     GroupName = groupName,
                     Desc = "Thêm  kiểu dáng sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -215,7 +215,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.DesignsTable,
                     GroupName = groupName,
                     Desc = "Xóa kiểu dáng sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -224,7 +224,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.DesignsTable,
                     GroupName = groupName,
                     Desc = "Sửa kiểu dáng sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -234,7 +234,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.DesignsTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách kiểu dáng sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 }
                 
             );
@@ -250,7 +250,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.ImageTable,
                     GroupName = groupName,
                     Desc = "Thêm  hình ảnh sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -259,7 +259,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.ImageTable,
                     GroupName = groupName,
                     Desc = "Xóa hình ảnh sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -268,7 +268,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.ImageTable,
                     GroupName = groupName,
                     Desc = "Sửa hình ảnh sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -278,7 +278,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.ImageTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách hình ảnh sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -294,7 +294,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.InvoiceTable,
                     GroupName = groupName,
                     Desc = "Xóa đơn hàng",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -303,7 +303,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.InvoiceTable,
                     GroupName = groupName,
                     Desc = "Sửa đơn hàng",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -313,7 +313,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.InvoiceTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách đơn hàng",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -322,7 +322,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.InvoiceTable,
                     GroupName = groupName,
                     Desc = "Xem  đơn hàng",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -338,7 +338,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.InvoiceDetailsTable,
                     GroupName = groupName,
                     Desc = "Xóa đơn hàng",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -347,7 +347,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.InvoiceDetailsTable,
                     GroupName = groupName,
                     Desc = "Xem chi tiết danh sách đơn hàng",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -362,7 +362,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.NewsTable,
                     GroupName = groupName,
                     Desc = "Thêm tin tức",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -371,7 +371,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.NewsTable,
                     GroupName = groupName,
                     Desc = "Xóa tin tức",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -380,7 +380,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.NewsTable,
                     GroupName = groupName,
                     Desc = "Sửa tin tức",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -390,7 +390,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.NewsTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách tin tức",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                   new MstPerMission
                   {
@@ -399,13 +399,13 @@ namespace DACS2.Data.DataSender
                       Table = NameTable.NewsTable,
                       GroupName = groupName,
                       Desc = "Xem tin tức",
-                      CreatedDate = now
+                      CreateAt = now
                   }
             );
             #endregion
             #region Data liên quan đến bảng Product
             // Permission liên quan đến bảng AppRole
-            groupName = "Quản lý tin tức";
+            groupName = "Quản lý sản phẩm";
             builder.HasData(
                 new MstPerMission
                 {
@@ -414,7 +414,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.productTable,
                     GroupName = groupName,
                     Desc = "Thêm sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -423,7 +423,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.productTable,
                     GroupName = groupName,
                     Desc = "Xóa sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -432,7 +432,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.productTable,
                     GroupName = groupName,
                     Desc = "Sửa sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -442,7 +442,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.productTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -451,7 +451,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.productTable,
                     GroupName = groupName,
                     Desc = "Xem sản phẩm",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -466,7 +466,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.UserTable,
                     GroupName = groupName,
                     Desc = "Thêm tài khoản",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -475,7 +475,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.UserTable,
                     GroupName = groupName,
                     Desc = "Xóa tài khoản",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -484,7 +484,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.UserTable,
                     GroupName = groupName,
                     Desc = "Sửa tài khoản",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -494,7 +494,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.UserTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách tài khoản",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -503,7 +503,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.UserTable,
                     GroupName = groupName,
                     Desc = "Mở khóa tài khoản",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                  new MstPerMission
                  {
@@ -512,7 +512,7 @@ namespace DACS2.Data.DataSender
                      Table = NameTable.UserTable,
                      GroupName = groupName,
                      Desc = "Khóa tài khoản",
-                     CreatedDate = now
+                     CreateAt = now
                  },
                  new MstPerMission
                  {
@@ -521,7 +521,7 @@ namespace DACS2.Data.DataSender
                      Table = NameTable.UserTable,
                      GroupName = groupName,
                      Desc = "Đổi mật khẩu",
-                     CreatedDate = now
+                     CreateAt = now
                  },
                  new MstPerMission
                  {
@@ -530,13 +530,13 @@ namespace DACS2.Data.DataSender
                      Table = NameTable.UserTable,
                      GroupName = groupName,
                      Desc = "Xem tài khoản",
-                     CreatedDate = now
+                     CreateAt = now
                  }
             );
             #endregion
             #region Data liên quan đến bảng Voucher
             // Permission liên quan đến bảng AppRole
-            groupName = "Quản lý tin tức";
+            groupName = "Quản lý mã giảm giá";
             builder.HasData(
                 new MstPerMission
                 {
@@ -545,7 +545,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.VoucherTable,
                     GroupName = groupName,
                     Desc = "Thêm mã giảm giá",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -554,7 +554,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.VoucherTable,
                     GroupName = groupName,
                     Desc = "Xóa mã giảm giá",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -563,7 +563,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.VoucherTable,
                     GroupName = groupName,
                     Desc = "Sửa Mã giảm giá",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -573,7 +573,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.VoucherTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách mã",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -582,7 +582,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.VoucherTable,
                     GroupName = groupName,
                     Desc = "Xem mã giảm giá",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -597,7 +597,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.PolicyTable,
                     GroupName = groupName,
                     Desc = "Thêm chính sách",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -606,7 +606,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.PolicyTable,
                     GroupName = groupName,
                     Desc = "Xóa chính sách",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -615,7 +615,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.PolicyTable,
                     GroupName = groupName,
                     Desc = "Sửa chính sách",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -625,7 +625,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.PolicyTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách chính sách",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -640,7 +640,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SystemTable,
                     GroupName = groupName,
                     Desc = "Thêm thông tin web",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -649,7 +649,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SystemTable,
                     GroupName = groupName,
                     Desc = "Xóa thông tin",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -658,7 +658,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SystemTable,
                     GroupName = groupName,
                     Desc = "Sửa thông tin",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -667,7 +667,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SystemTable,
                     GroupName = groupName,
                     Desc = "Xem thông tin",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
@@ -682,7 +682,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SupplierTable,
                     GroupName = groupName,
                     Desc = "Thêm nhà cung cấp",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -691,7 +691,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SupplierTable,
                     GroupName = groupName,
                     Desc = "Xóa nhà cung cấp",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -700,7 +700,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SupplierTable,
                     GroupName = groupName,
                     Desc = "Sửa nhà cung cấp",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -710,59 +710,59 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SupplierTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách nhà cung cấp",
-                    CreatedDate = now
+                    CreateAt = now
                 }
             );
             #endregion
             #region Data liên quan đến bảng report
             // Permission liên quan đến bảng policy
-            groupName = "Quản lý nhà cung cấp";
+            groupName = "Quản lý phản hồi";
             builder.HasData(
                 new MstPerMission
                 {
                     Id = AuthConst.Report.CREATE,
                     Code = "CREATE",
-                    Table = NameTable.SupplierTable,
+                    Table = NameTable.ReportTable,
                     GroupName = groupName,
                     Desc = "Thêm phản hồi",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
                     Id = AuthConst.Report.DELETE,
                     Code = "DELETE",
-                    Table = NameTable.SupplierTable,
+                    Table = NameTable.ReportTable,
                     GroupName = groupName,
-                    Desc = "Xóa nhà cung cấp",
-                    CreatedDate = now
+                    Desc = "Xóa phản hồi",
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
                     Id = AuthConst.Report.UPDATE,
                     Code = "UPDATE",
-                    Table = NameTable.SupplierTable,
+                    Table = NameTable.ReportTable,
                     GroupName = groupName,
                     Desc = "Sửa phản hồi",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
                 {
                     Id = AuthConst.Report.VIEW_LIST,
                     Code = "VIEW_LIST",
-                    Table = NameTable.SupplierTable,
+                    Table = NameTable.ReportTable,
                     GroupName = groupName,
                     Desc = "Xem danh sách phản hồi",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                  new MstPerMission
                  {
                      Id = AuthConst.Report.VIEW_DETAIL,
                      Code = "VIEW_DETAIL",
-                     Table = NameTable.SupplierTable,
+                     Table = NameTable.ReportTable,
                      GroupName = groupName,
                      Desc = "Xem phản hồi",
-                     CreatedDate = now
+                     CreateAt = now
                  }
             );
             #endregion
@@ -777,7 +777,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SizeTable,
                     GroupName = groupName,
                     Desc = "Thêm Size",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -786,7 +786,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SizeTable,
                     GroupName = groupName,
                     Desc = "Xóa Size",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                 new MstPerMission
                 {
@@ -795,7 +795,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SizeTable,
                     GroupName = groupName,
                     Desc = "Sửa Size",
-                    CreatedDate = now
+                    CreateAt = now
                 },
 
                 new MstPerMission
@@ -805,7 +805,7 @@ namespace DACS2.Data.DataSender
                     Table = NameTable.SizeTable,
                     GroupName = groupName,
                     Desc = "Xem danh sáchSize",
-                    CreatedDate = now
+                    CreateAt = now
                 },
                  new MstPerMission
                  {
@@ -814,7 +814,7 @@ namespace DACS2.Data.DataSender
                      Table = NameTable.SizeTable,
                      GroupName = groupName,
                      Desc = "Xem Size",
-                     CreatedDate = now
+                     CreateAt = now
                  }
             );
             #endregion

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.32916.344
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DACS2.Web", "DACS2.Web\DACS2.Web.csproj", "{BCC6B6C3-BDC6-40C7-9610-831DE0C266E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DACS2.Web", "DACS2.Web\DACS2.Web.csproj", "{BCC6B6C3-BDC6-40C7-9610-831DE0C266E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DACS2.Data", "DACS2.Data\DACS2.Data.csproj", "{84EA52AC-00CA-4B35-824C-7FA9363CBC6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DACS2.Data", "DACS2.Data\DACS2.Data.csproj", "{84EA52AC-00CA-4B35-824C-7FA9363CBC6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DACS2.Share", "DACS2.Share\DACS2.Share.csproj", "{11D13FFA-0EDC-47C0-9F10-10B7B6230527}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DACS2.Share", "DACS2.Share\DACS2.Share.csproj", "{11D13FFA-0EDC-47C0-9F10-10B7B6230527}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -45,7 +45,7 @@ namespace DACS2.Data.Migrations
                     b.Property<int?>("DislayOrder")
                         .HasColumnType("int");
 
-                    b.Property<string>("ProductNewsName")
+                    b.Property<string>("NewsName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -296,12 +296,24 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime?>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeleteAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Desc")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DetleteBy")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DislayOrder")
+                        .HasColumnType("int");
 
                     b.Property<string>("GroupName")
                         .IsRequired()
@@ -310,6 +322,9 @@ namespace DACS2.Data.Migrations
                     b.Property<string>("Table")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -320,7 +335,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9203,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm quyền",
                             GroupName = "Quản lý phân quyền",
                             Table = "Role"
@@ -329,7 +344,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9208,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa quyền",
                             GroupName = "Quản lý phân quyền",
                             Table = "Role"
@@ -338,7 +353,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9204,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa quyền",
                             GroupName = "Quản lý phân quyền",
                             Table = "Role"
@@ -347,7 +362,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9202,
                             Code = "VIEW_DETAIL",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem chi tiết quyền",
                             GroupName = "Quản lý phân quyền",
                             Table = "Role"
@@ -356,7 +371,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9201,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách quyền",
                             GroupName = "Quản lý phân quyền",
                             Table = "Role"
@@ -365,7 +380,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 2003,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm thể loại tin thức",
                             GroupName = "Quản lý Thể loại tin tức",
                             Table = "CategoryNews"
@@ -374,7 +389,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 2008,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa thể loại tin thức",
                             GroupName = "Quản lý Thể loại tin tức",
                             Table = "CategoryNews"
@@ -383,7 +398,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 2004,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa thể loại tin thức",
                             GroupName = "Quản lý Thể loại tin tức",
                             Table = "CategoryNews"
@@ -392,7 +407,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 2001,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách thể loại tin thức",
                             GroupName = "Quản lý Thể loại tin tức",
                             Table = "CategoryNews"
@@ -401,7 +416,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 3003,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm thể loại sản phẩm",
                             GroupName = "Quản lý thể loại sản phẩm",
                             Table = "CategoryProduct"
@@ -410,7 +425,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 3008,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa thể loại sản phẩm",
                             GroupName = "Quản lý thể loại sản phẩm",
                             Table = "CategoryProduct"
@@ -419,7 +434,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 3004,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa thể loại sản phẩm",
                             GroupName = "Quản lý thể loại sản phẩm",
                             Table = "CategoryProduct"
@@ -428,7 +443,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 3001,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách thể loại sản phẩm",
                             GroupName = "Quản lý thể loại sản phẩm",
                             Table = "CategoryProduct"
@@ -437,7 +452,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 4003,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm màu sản phẩm",
                             GroupName = "Quản lý màu sản phẩm",
                             Table = "Color"
@@ -446,7 +461,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 4008,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa màu sản phẩm",
                             GroupName = "Quản lý màu sản phẩm",
                             Table = "Color"
@@ -455,7 +470,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 4004,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa màu sản phẩm",
                             GroupName = "Quản lý màu sản phẩm",
                             Table = "Color"
@@ -464,7 +479,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 4001,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách màu sản phẩm",
                             GroupName = "Quản lý màu sản phẩm",
                             Table = "Color"
@@ -473,7 +488,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 5003,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm  kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
                             Table = " Designs"
@@ -482,7 +497,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 5008,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
                             Table = " Designs"
@@ -491,7 +506,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 5004,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
                             Table = " Designs"
@@ -500,7 +515,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 5001,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
                             Table = " Designs"
@@ -509,7 +524,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 6003,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm  hình ảnh sản phẩm",
                             GroupName = "Quản lý hình sản phẩm",
                             Table = "Image"
@@ -518,7 +533,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 6008,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa hình ảnh sản phẩm",
                             GroupName = "Quản lý hình sản phẩm",
                             Table = "Image"
@@ -527,7 +542,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 6004,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa hình ảnh sản phẩm",
                             GroupName = "Quản lý hình sản phẩm",
                             Table = "Image"
@@ -536,7 +551,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 6001,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách hình ảnh sản phẩm",
                             GroupName = "Quản lý hình sản phẩm",
                             Table = "Image"
@@ -545,7 +560,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 7008,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa đơn hàng",
                             GroupName = "Quản lý giỏ hàng",
                             Table = "Invoice"
@@ -554,7 +569,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 7004,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa đơn hàng",
                             GroupName = "Quản lý giỏ hàng",
                             Table = "Invoice"
@@ -563,7 +578,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 7001,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách đơn hàng",
                             GroupName = "Quản lý giỏ hàng",
                             Table = "Invoice"
@@ -572,7 +587,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 7002,
                             Code = "VIEW_DETAIL",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem  đơn hàng",
                             GroupName = "Quản lý giỏ hàng",
                             Table = "Invoice"
@@ -581,7 +596,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 8008,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa đơn hàng",
                             GroupName = "Quản lý giỏ hàng",
                             Table = "InvoiceDetails"
@@ -590,7 +605,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 8001,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem chi tiết danh sách đơn hàng",
                             GroupName = "Quản lý giỏ hàng",
                             Table = "InvoiceDetails"
@@ -599,7 +614,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9003,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm tin tức",
                             GroupName = "Quản lý tin tức",
                             Table = "News"
@@ -608,7 +623,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9008,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa tin tức",
                             GroupName = "Quản lý tin tức",
                             Table = "News"
@@ -617,7 +632,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9004,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa tin tức",
                             GroupName = "Quản lý tin tức",
                             Table = "News"
@@ -626,7 +641,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9001,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách tin tức",
                             GroupName = "Quản lý tin tức",
                             Table = "News"
@@ -635,7 +650,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9002,
                             Code = "VIEW_DETAIL",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem tin tức",
                             GroupName = "Quản lý tin tức",
                             Table = "News"
@@ -644,52 +659,52 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9103,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm sản phẩm",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý sản phẩm",
                             Table = "Product"
                         },
                         new
                         {
                             Id = 9108,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa sản phẩm",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý sản phẩm",
                             Table = "Product"
                         },
                         new
                         {
                             Id = 9104,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa sản phẩm",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý sản phẩm",
                             Table = "Product"
                         },
                         new
                         {
                             Id = 9101,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách sản phẩm",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý sản phẩm",
                             Table = "Product"
                         },
                         new
                         {
                             Id = 9102,
                             Code = "VIEW_DETAIL",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem sản phẩm",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý sản phẩm",
                             Table = "Product"
                         },
                         new
                         {
                             Id = 1003,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm tài khoản",
                             GroupName = "Quản lý tài khoản",
                             Table = "User"
@@ -698,7 +713,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 1008,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa tài khoản",
                             GroupName = "Quản lý tài khoản",
                             Table = "User"
@@ -707,7 +722,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 1004,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa tài khoản",
                             GroupName = "Quản lý tài khoản",
                             Table = "User"
@@ -716,7 +731,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 1001,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách tài khoản",
                             GroupName = "Quản lý tài khoản",
                             Table = "User"
@@ -725,7 +740,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 1007,
                             Code = "UNBLOCK",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Mở khóa tài khoản",
                             GroupName = "Quản lý tài khoản",
                             Table = "User"
@@ -734,7 +749,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 1006,
                             Code = "BLOCK",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Khóa tài khoản",
                             GroupName = "Quản lý tài khoản",
                             Table = "User"
@@ -743,7 +758,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 1005,
                             Code = "UPDATE_PWD",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Đổi mật khẩu",
                             GroupName = "Quản lý tài khoản",
                             Table = "User"
@@ -752,7 +767,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 1002,
                             Code = "VIEW_DETAIL",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem tài khoản",
                             GroupName = "Quản lý tài khoản",
                             Table = "User"
@@ -761,52 +776,52 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9503,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm mã giảm giá",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý mã giảm giá",
                             Table = "Voucher"
                         },
                         new
                         {
                             Id = 9508,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa mã giảm giá",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý mã giảm giá",
                             Table = "Voucher"
                         },
                         new
                         {
                             Id = 9504,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa Mã giảm giá",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý mã giảm giá",
                             Table = "Voucher"
                         },
                         new
                         {
                             Id = 9501,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách mã",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý mã giảm giá",
                             Table = "Voucher"
                         },
                         new
                         {
                             Id = 9502,
                             Code = "VIEW_DETAIL",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem mã giảm giá",
-                            GroupName = "Quản lý tin tức",
+                            GroupName = "Quản lý mã giảm giá",
                             Table = "Voucher"
                         },
                         new
                         {
                             Id = 9703,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm chính sách",
                             GroupName = "Quản lý chính sách",
                             Table = "Policy"
@@ -815,7 +830,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9708,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa chính sách",
                             GroupName = "Quản lý chính sách",
                             Table = "Policy"
@@ -824,7 +839,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9704,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa chính sách",
                             GroupName = "Quản lý chính sách",
                             Table = "Policy"
@@ -833,7 +848,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9701,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách chính sách",
                             GroupName = "Quản lý chính sách",
                             Table = "Policy"
@@ -842,7 +857,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9903,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm thông tin web",
                             GroupName = "Quản lý system",
                             Table = "System"
@@ -851,7 +866,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9908,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa thông tin",
                             GroupName = "Quản lý system",
                             Table = "System"
@@ -860,7 +875,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9904,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa thông tin",
                             GroupName = "Quản lý system",
                             Table = "System"
@@ -869,7 +884,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9902,
                             Code = "VIEW_DETAIL",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem thông tin",
                             GroupName = "Quản lý system",
                             Table = "System"
@@ -878,7 +893,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9803,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm nhà cung cấp",
                             GroupName = "Quản lý nhà cung cấp",
                             Table = "Supplier"
@@ -887,7 +902,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9808,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa nhà cung cấp",
                             GroupName = "Quản lý nhà cung cấp",
                             Table = "Supplier"
@@ -896,7 +911,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9804,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa nhà cung cấp",
                             GroupName = "Quản lý nhà cung cấp",
                             Table = "Supplier"
@@ -905,7 +920,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9801,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách nhà cung cấp",
                             GroupName = "Quản lý nhà cung cấp",
                             Table = "Supplier"
@@ -914,52 +929,52 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 1903,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm phản hồi",
-                            GroupName = "Quản lý nhà cung cấp",
-                            Table = "Supplier"
+                            GroupName = "Quản lý phản hồi",
+                            Table = "Report"
                         },
                         new
                         {
                             Id = 1908,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Desc = "Xóa nhà cung cấp",
-                            GroupName = "Quản lý nhà cung cấp",
-                            Table = "Supplier"
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Xóa phản hồi",
+                            GroupName = "Quản lý phản hồi",
+                            Table = "Report"
                         },
                         new
                         {
                             Id = 1904,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa phản hồi",
-                            GroupName = "Quản lý nhà cung cấp",
-                            Table = "Supplier"
+                            GroupName = "Quản lý phản hồi",
+                            Table = "Report"
                         },
                         new
                         {
                             Id = 1901,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách phản hồi",
-                            GroupName = "Quản lý nhà cung cấp",
-                            Table = "Supplier"
+                            GroupName = "Quản lý phản hồi",
+                            Table = "Report"
                         },
                         new
                         {
                             Id = 1902,
                             Code = "VIEW_DETAIL",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem phản hồi",
-                            GroupName = "Quản lý nhà cung cấp",
-                            Table = "Supplier"
+                            GroupName = "Quản lý phản hồi",
+                            Table = "Report"
                         },
                         new
                         {
                             Id = 9403,
                             Code = "CREATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm Size",
                             GroupName = "Quản lý Size",
                             Table = "Size"
@@ -968,7 +983,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9408,
                             Code = "DELETE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa Size",
                             GroupName = "Quản lý Size",
                             Table = "Size"
@@ -977,7 +992,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9404,
                             Code = "UPDATE",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa Size",
                             GroupName = "Quản lý Size",
                             Table = "Size"
@@ -986,7 +1001,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9401,
                             Code = "VIEW_LIST",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sáchSize",
                             GroupName = "Quản lý Size",
                             Table = "Size"
@@ -995,7 +1010,7 @@ namespace DACS2.Data.Migrations
                         {
                             Id = 9402,
                             Code = "VIEW_DETAIL",
-                            CreatedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem Size",
                             GroupName = "Quản lý Size",
                             Table = "Size"
@@ -1213,6 +1228,10 @@ namespace DACS2.Data.Migrations
                     b.Property<DateTime?>("DeleteAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DetleteBy")
                         .HasColumnType("datetime2");
 
@@ -1353,25 +1372,25 @@ namespace DACS2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2022, 9, 30, 15, 43, 34, 893, DateTimeKind.Local).AddTicks(9129),
+                            CreateAt = new DateTime(2022, 10, 18, 14, 11, 58, 621, DateTimeKind.Local).AddTicks(9553),
                             StatusName = "Đang chờ xử lý"
                         },
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2022, 9, 30, 15, 43, 34, 893, DateTimeKind.Local).AddTicks(9129),
+                            CreateAt = new DateTime(2022, 10, 18, 14, 11, 58, 621, DateTimeKind.Local).AddTicks(9553),
                             StatusName = "Đang lấy hàng"
                         },
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2022, 9, 30, 15, 43, 34, 893, DateTimeKind.Local).AddTicks(9129),
+                            CreateAt = new DateTime(2022, 10, 18, 14, 11, 58, 621, DateTimeKind.Local).AddTicks(9553),
                             StatusName = "Đang giao hàng"
                         },
                         new
                         {
                             Id = 4,
-                            CreateAt = new DateTime(2022, 9, 30, 15, 43, 34, 893, DateTimeKind.Local).AddTicks(9129),
+                            CreateAt = new DateTime(2022, 10, 18, 14, 11, 58, 621, DateTimeKind.Local).AddTicks(9553),
                             StatusName = "Giao hàng thành công"
                         });
                 });
@@ -1477,6 +1496,10 @@ namespace DACS2.Data.Migrations
                     b.Property<int?>("DislayOrder")
                         .HasColumnType("int");
 
+                    b.Property<string>("Gmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("IdRole")
                         .HasColumnType("int");
 
@@ -1488,8 +1511,9 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<int?>("RoleId")
-                        .HasColumnType("int");
+                    b.Property<string>("SDT")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdateAt")
                         .HasColumnType("datetime2");
@@ -1501,8 +1525,6 @@ namespace DACS2.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdRole");
-
-                    b.HasIndex("RoleId");
 
                     b.ToTable("User");
                 });
@@ -1543,7 +1565,13 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("price")
+                    b.Property<int>("amount")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("percent")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("price")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -1669,12 +1697,10 @@ namespace DACS2.Data.Migrations
             modelBuilder.Entity("DACS2.Data.Entities.User", b =>
                 {
                     b.HasOne("DACS2.Data.Entities.Role", "role")
-                        .WithMany()
-                        .HasForeignKey("IdRole");
-
-                    b.HasOne("DACS2.Data.Entities.Role", null)
                         .WithMany("Users")
-                        .HasForeignKey("RoleId");
+                        .HasForeignKey("IdRole")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("role");
                 });

@@ -16,7 +16,7 @@ namespace DACS2.Data.Entities
         {
             news = new HashSet<News>();
         }
-        public string ProductNewsName { get; set; }
+        public string NewsName { get; set; }
         public ICollection<News> news { get; set; }
     }
 }

@@ -13,7 +13,9 @@ namespace DACS2.Data.Entities
     public class Voucher : BaseEntity
     {
         public string VoucherName { get; set; }
-        public int price { get; set; }
+        public int? price { get; set; }
+        public int amount { get; set; }
+        public int? percent { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
     }

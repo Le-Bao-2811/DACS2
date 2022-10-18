@@ -18,6 +18,7 @@ namespace DACS2.Data.Entities
             rolePermissions = new HashSet<RolePermission>();
         }
         public string RoleName { get; set; }
+        public string Description { get; set; }
         public ICollection<RolePermission> rolePermissions { get; set; }
         public ICollection<User> Users { get; set; }
     }

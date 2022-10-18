@@ -1,4 +1,8 @@
+﻿using AutoMapper;
 using DACS2.Data;
+using DACS2.Data.Reponsitory;
+using DACS2.Web.WebConfig;
+using DACS2.Web.WebConfig.Const;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +13,25 @@ builder.Services.AddDbContext<DACS2DbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Database"));
 });
-
+builder.Services.AddHttpContextAccessor();
+// khai báo generic
+builder.Services.AddScoped<BaseReponsitory>();
+builder.Services.AddServiceRepositories();
+//câu hình đăng nhập
+builder.Services.AddAuthentication(AppConst.COOKIES_AUTH)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = AppConst.ADMIN_LOGIN_PATH;
+                    options.ExpireTimeSpan = TimeSpan.FromHours(AppConst.LOGIN_TIMEOUT);
+                    options.Cookie.HttpOnly = true;
+                });
+// cấu hình mapper
+var mapperConfig = new MapperConfiguration(config =>
+{
+    config.AddProfile(new MapperConfig());
+});
+IMapper mapper = mapperConfig.CreateMapper();
+builder.Services.AddSingleton(mapper);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,15 +46,33 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
-app.MapAreaControllerRoute(
-    areaName:"Admin",
-    name:"Admin",
-    pattern: "Admin/{controller=Home}/{action=Index}/{id?}"    
- );
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapAreaControllerRoute(
+                areaName: "Admin",
+                name: "adminLogin",
+                pattern: "/Admin/Login",
+                defaults: new
+                {
+                    controller = "Account",
+                    action = "Login",
+                    area = "Admin"
+                });
+        endpoints.MapAreaControllerRoute(
+        name: "Admin",
+        areaName: "Admin",
+        pattern: "Admin/{controller=Home}/{action=Index}/{id?}"
+        );
+        endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"
+        );
+    });
+});
 
 app.Run();

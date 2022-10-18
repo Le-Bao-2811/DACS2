@@ -1,0 +1,6 @@
+﻿@model IEnumerable<DACS2.Data.Entities.Role>
+
+@foreach (var item in Model)
+{
+    <option value="@item.Id" >@item.RoleName</option>
+}

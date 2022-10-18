@@ -13,7 +13,9 @@ namespace DACS2.Data.Config
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasOne(x => x.role).WithMany().IsRequired(false).HasForeignKey(x => x.IdRole);
+            builder.HasOne(m => m.role)
+           .WithMany(m => m.Users)
+           .HasForeignKey(m => m.IdRole);
         }
     }
 }
