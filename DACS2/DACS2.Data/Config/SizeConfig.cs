@@ -12,7 +12,7 @@ namespace DACS2.Data.Config
     public class SizeConfig : IEntityTypeConfiguration<Size>
     {
         public void Configure(EntityTypeBuilder<Size> builder)
-        {
+        {          
             builder.HasOne(m => m.product)
                  .WithMany(m => m.sizes)
                  .HasForeignKey(m => m.IdProduct);

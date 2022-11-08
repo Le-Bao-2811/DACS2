@@ -1,0 +1,8 @@
+﻿@model IEnumerable<DACS2.Data.Entities.Image>
+
+@foreach (var item in Model)
+{
+    <div class="carousel-item">
+        <img class="w-100 h-100" src="~/ClientTLE/img/@item.pathImage" alt="Image">
+    </div>
+}

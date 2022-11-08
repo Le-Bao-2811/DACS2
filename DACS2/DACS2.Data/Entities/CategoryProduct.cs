@@ -17,6 +17,7 @@ namespace DACS2.Data.Entities
             Products=new HashSet<Product>();
         }
         public string CategoryName { get; set; }
+        public string? pathImg { get; set; }
         public int SoLuong { get; set; }
         public ICollection<Product> Products { get; set; }
     }

@@ -22,11 +22,13 @@ namespace DACS2.Web.Areas.Admin.Controllers
             var data = await _repo.GetAll<Voucher, ListVocherVM>(MapperConfig.VoucherIndexConf).ToPagedListAsync(page,size);
             return View(data);
         }
+        [AppAuthorize(AuthConst.Voucher.CREATE)]
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
+        [AppAuthorize(AuthConst.Voucher.CREATE)]
         public async Task<IActionResult> Create(AddorUpdateVocher model)
         {
             if (model.EndDate < DateTime.Now)
@@ -39,6 +41,7 @@ namespace DACS2.Web.Areas.Admin.Controllers
             SetSuccessMesg("Thêm mã giảm giá thành công");
             return RedirectToAction("Index");
         }
+        [AppAuthorize(AuthConst.Voucher.UPDATE)]
         public async Task<IActionResult> Update(int id)
         {
             var data = await _repo.GetOneAsync<Voucher, AddorUpdateVocher>(id, r => new AddorUpdateVocher
@@ -54,6 +57,7 @@ namespace DACS2.Web.Areas.Admin.Controllers
             return View(data);
         }
         [HttpPost]
+        [AppAuthorize(AuthConst.Voucher.UPDATE)]
         public async Task<IActionResult> Update(AddorUpdateVocher model)
         {
             if (model.EndDate < DateTime.Now)
@@ -72,7 +76,7 @@ namespace DACS2.Web.Areas.Admin.Controllers
             var data=await _repo.FindAsync<Voucher>(id);
             await _repo.DeleteAsync(data);
             SetErrorMesg("Xóa mã giảm giá thành công");
-            return RedirectToAction("Index")
+            return RedirectToAction("Index");
         }
     }
 }

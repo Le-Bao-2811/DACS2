@@ -76,13 +76,54 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                 },
                 new MenuItem
                 {
+                    DisplayText = "Quản lý Sản phẩm",
+                    Icon = "fa-shopping-basket",
+                    ChildrenItems = new MenuItem[]
+                    {
+                       new MenuItem
+                        {
+                            Action = "Index",
+                            Controller = "Supplier",
+                            DisplayText = "Nhà cung cấp",
+                            Icon = "fa-box",
+                            Permission = AuthConst.Supplier.VIEW_LIST
+                        },
+                         new MenuItem
+                        {
+                            Action = "Index",
+                            Controller = "CategoryProduct",
+                            DisplayText = "Thể loại sản phẩm",
+                            Icon = "fa-box",
+                            Permission = AuthConst.News.VIEW_LIST
+                        },
+                          new MenuItem
+                        {
+                            Action = "Index",
+                            Controller = "Product",
+                            DisplayText = "Sản phầm",
+                            Icon = "fa-box",
+                            Permission = AuthConst.News.VIEW_LIST
+                        },
+
+                    }
+                },
+                new MenuItem
+                {
                             Action = "Index",
                             Controller = "Voucher",
                             DisplayText = "Mã giảm giá",
                             Icon = "fa-box",
                             Permission = AuthConst.Voucher.VIEW_LIST
                 },
-				
+                new MenuItem
+                        {
+                            Action = "Index",
+                            Controller = "Policy",
+                            DisplayText = "Chính sách",
+                            Icon = "fa-box",
+                            Permission = AuthConst.Policy.VIEW_LIST
+                        },
+                
 				//new MenuItem
 				//{
 				//	DisplayText = "Menu 2 cấp",

@@ -90,6 +90,9 @@ namespace DACS2.Data.Migrations
                     b.Property<DateTime?>("UpdateAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("pathImg")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("CategoryProduct");
@@ -103,7 +106,7 @@ namespace DACS2.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Amount")
+                    b.Property<int?>("Amount")
                         .HasColumnType("int");
 
                     b.Property<string>("ColorName")
@@ -184,16 +187,40 @@ namespace DACS2.Data.Migrations
             modelBuilder.Entity("DACS2.Data.Entities.Image", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DetleteBy")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DislayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdDesign")
                         .HasColumnType("int");
 
                     b.Property<int>("IdProduct")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("UpdateAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("pathImage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id", "IdProduct");
+                    b.HasKey("Id");
 
                     b.HasIndex("IdProduct");
 
@@ -1124,6 +1151,10 @@ namespace DACS2.Data.Migrations
                     b.Property<DateTime?>("DeleteAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DetleteBy")
                         .HasColumnType("datetime2");
 
@@ -1155,6 +1186,9 @@ namespace DACS2.Data.Migrations
 
                     b.Property<DateTime?>("UpdateAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("pathImgP")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("slug")
                         .IsRequired()
@@ -1299,7 +1333,7 @@ namespace DACS2.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Amount")
+                    b.Property<int?>("Amount")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("CreateAt")
@@ -1372,25 +1406,25 @@ namespace DACS2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2022, 10, 18, 14, 11, 58, 621, DateTimeKind.Local).AddTicks(9553),
+                            CreateAt = new DateTime(2022, 11, 4, 15, 33, 2, 203, DateTimeKind.Local).AddTicks(6646),
                             StatusName = "Đang chờ xử lý"
                         },
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2022, 10, 18, 14, 11, 58, 621, DateTimeKind.Local).AddTicks(9553),
+                            CreateAt = new DateTime(2022, 11, 4, 15, 33, 2, 203, DateTimeKind.Local).AddTicks(6646),
                             StatusName = "Đang lấy hàng"
                         },
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2022, 10, 18, 14, 11, 58, 621, DateTimeKind.Local).AddTicks(9553),
+                            CreateAt = new DateTime(2022, 11, 4, 15, 33, 2, 203, DateTimeKind.Local).AddTicks(6646),
                             StatusName = "Đang giao hàng"
                         },
                         new
                         {
                             Id = 4,
-                            CreateAt = new DateTime(2022, 10, 18, 14, 11, 58, 621, DateTimeKind.Local).AddTicks(9553),
+                            CreateAt = new DateTime(2022, 11, 4, 15, 33, 2, 203, DateTimeKind.Local).AddTicks(6646),
                             StatusName = "Giao hàng thành công"
                         });
                 });

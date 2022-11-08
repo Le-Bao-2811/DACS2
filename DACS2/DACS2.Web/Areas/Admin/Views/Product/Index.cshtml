@@ -1,0 +1,61 @@
+﻿@model IEnumerable<DACS2.Web.Areas.Admin.ViewModel.Product.ListProductVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (User.IsInPermission(AuthConst.Product.CREATE))
+{
+    <div class="my-2">
+        <a class="btn btn-primary" asp-action="Create">
+            <i class="fas fa-plus-circle"></i> &nbsp; Thêm mới sản phẩm
+        </a>
+    </div>
+}
+
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá nhập</th>
+                <th>Giá bán </th>
+                <th>Số lượng </th>
+                <th>Thể loại </th>
+                <th>Nhà cung cấp </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="fit">@item.Id</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.ImportPrice</td>
+                    <td>@item.Price</td>
+                    <td>@item.Amount</td>
+                    <td>@item.ProductCategory</td>
+                    <td>@item.Suplier</td>
+                    <td class="fit">
+                        @if (User.IsInPermission(AuthConst.Product.DELETE))
+                        {
+                            <a asp-action="Delete" asp-route-id="@item.Id"
+                               class="btn btn-outline-secondary btn-sm"><i class="fas fa-trash"></i></a>
+                        }
+                        @if (User.IsInPermission(AuthConst.Product.UPDATE))
+                        {
+
+                            <a class="btn btn-outline-secondary btn-sm" asp-action="Update" asp-route-id="@item.Id">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<partial name="_Pager" />

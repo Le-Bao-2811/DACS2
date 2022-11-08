@@ -14,7 +14,7 @@ namespace DACS2.Data.Entities
     {
         
         public string ColorName { get; set; }
-        public int Amount { get; set; }
+        public int? Amount { get; set; }
         public int IdProduct { get; set; }
         public Product product { get; set; }
     }

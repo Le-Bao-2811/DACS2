@@ -39,6 +39,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlOZXdzXF9VcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/CategoryProduct/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlQcm9kdWN0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/CategoryProduct/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlQcm9kdWN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/CategoryProduct/_Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlQcm9kdWN0XF9VcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -53,6 +65,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/News/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Policy/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9saWN5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Policy/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9saWN5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Policy/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9saWN5XFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Role/AddRole.cshtml]
@@ -71,8 +103,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGlzdE5ld0NhdGVnb3J5Vmlld0NvbXBvbmVudHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Shared/Components/ListProductCategoryViewComponents/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGlzdFByb2R1Y3RDYXRlZ29yeVZpZXdDb21wb25lbnRzXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Shared/Components/ListRoleViewComponents/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGlzdFJvbGVWaWV3Q29tcG9uZW50c1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Shared/Components/ListSupplierViewComponents/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGlzdFN1cHBsaWVyVmlld0NvbXBvbmVudHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Shared/Components/MainNavBar/Default.cshtml]
@@ -107,6 +147,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Supplier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Supplier/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Supplier/_Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJcX1VwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Areas/Admin/Views/Voucher/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -127,12 +179,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Cart/Shopping.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxTaG9wcGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Home/DeltailsProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWx0YWlsc1Byb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/ClientCPViewComponents/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2xpZW50Q1BWaWV3Q29tcG9uZW50c1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/ClientListColorViewComponents/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2xpZW50TGlzdENvbG9yVmlld0NvbXBvbmVudHNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/ClientListProductsViewComponents/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2xpZW50TGlzdFByb2R1Y3RzVmlld0NvbXBvbmVudHNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/ClientListSizeViewComponents/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2xpZW50TGlzdFNpemVWaWV3Q29tcG9uZW50c1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/ListImageViewComponents/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGlzdEltYWdlVmlld0NvbXBvbmVudHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Error.cshtml]

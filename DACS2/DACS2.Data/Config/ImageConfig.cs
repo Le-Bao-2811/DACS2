@@ -13,11 +13,7 @@ namespace DACS2.Data.Config
     {
         public void Configure(EntityTypeBuilder<Image> builder)
         {
-            builder.HasKey(x => new
-            {
-                x.Id,
-                x.IdProduct
-            });
+          
             builder.HasOne(m => m.Product)
                 .WithMany(m => m.images)
                 .HasForeignKey(m => m.IdProduct);

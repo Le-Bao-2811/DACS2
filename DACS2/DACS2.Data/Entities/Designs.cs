@@ -13,7 +13,7 @@ namespace DACS2.Data.Entities
     [Table(NameTable.DesignsTable)]
     public class Designs :BaseEntity
     {
-       
+      
         public string DesignsName { get; set; }
         public int Amount { get; set; }
         public int IdProduct { get; set; }

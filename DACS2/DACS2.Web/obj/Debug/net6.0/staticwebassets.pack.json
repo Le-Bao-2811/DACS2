@@ -5,6 +5,142 @@
       "PackagePath": "staticwebassets\\DACS2.Web.bundle.scp.css"
     },
     {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\Cart.js",
+      "PackagePath": "staticwebassets\\ClientTLE\\Cart.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\Style.css",
+      "PackagePath": "staticwebassets\\ClientTLE\\Style.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\carousel-1.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\carousel-3.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\carousel-3.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\cat-1.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\cat-1.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\cat-2.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\cat-2.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\cat-3.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\cat-3.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\cat-4.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\cat-4.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\offer-1.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\offer-1.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\offer-2.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\offer-2.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\payments.png",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\payments.png"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\product-1.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\product-1.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\product-2.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\product-2.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\product-3.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\product-3.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\product-4.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\product-4.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\product-5.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\product-5.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\product-6.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\product-6.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\product-7.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\product-7.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\product-8.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\product-8.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\product-9.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\product-9.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\user.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\user.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\vendor-1.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\vendor-1.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\vendor-2.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\vendor-2.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\vendor-3.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\vendor-3.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\vendor-4.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\vendor-4.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\vendor-5.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\vendor-5.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\vendor-6.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\vendor-6.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\vendor-7.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\vendor-7.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\vendor-8.jpg",
+      "PackagePath": "staticwebassets\\ClientTLE\\img\\vendor-8.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\mail\\contact.js",
+      "PackagePath": "staticwebassets\\ClientTLE\\mail\\contact.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\mail\\contact.php",
+      "PackagePath": "staticwebassets\\ClientTLE\\mail\\contact.php"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\mail\\jqBootstrapValidation.min.js",
+      "PackagePath": "staticwebassets\\ClientTLE\\mail\\jqBootstrapValidation.min.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\main.js",
+      "PackagePath": "staticwebassets\\ClientTLE\\main.js"
+    },
+    {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\adminLTE\\dist\\css\\AboutCompany.css",
       "PackagePath": "staticwebassets\\adminLTE\\dist\\css\\AboutCompany.css"
     },
@@ -129,6 +265,10 @@
       "PackagePath": "staticwebassets\\adminLTE\\dist\\js\\categoryNews\\categoryNews.js"
     },
     {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\adminLTE\\dist\\js\\categoryProduct\\categoryProduct.js",
+      "PackagePath": "staticwebassets\\adminLTE\\dist\\js\\categoryProduct\\categoryProduct.js"
+    },
+    {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\adminLTE\\dist\\js\\pages\\dashboard.js",
       "PackagePath": "staticwebassets\\adminLTE\\dist\\js\\pages\\dashboard.js"
     },
@@ -139,6 +279,14 @@
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\adminLTE\\dist\\js\\pages\\dashboard3.js",
       "PackagePath": "staticwebassets\\adminLTE\\dist\\js\\pages\\dashboard3.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\adminLTE\\dist\\js\\product\\add-product.js",
+      "PackagePath": "staticwebassets\\adminLTE\\dist\\js\\product\\add-product.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\adminLTE\\dist\\js\\supplier\\supplier.js",
+      "PackagePath": "staticwebassets\\adminLTE\\dist\\js\\supplier\\supplier.js"
     },
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\adminLTE\\plugins\\fontawesome-free\\css\\all.css",
@@ -277,12 +425,76 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\12304-11-2022-14-29-27-396.jpg",
+      "PackagePath": "staticwebassets\\img\\categoryProduct\\12304-11-2022-14-29-27-396.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\CDL10_104-11-2022-15-03-08-504.jpg",
+      "PackagePath": "staticwebassets\\img\\categoryProduct\\CDL10_104-11-2022-15-03-08-504.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\ao-khoachoodie-tron-304-11-2022-15-04-14-456.jpg",
+      "PackagePath": "staticwebassets\\img\\categoryProduct\\ao-khoachoodie-tron-304-11-2022-15-04-14-456.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\ao_khoac_ni_nam_devision_8f2404-11-2022-15-03-39-351.jpg",
+      "PackagePath": "staticwebassets\\img\\categoryProduct\\ao_khoac_ni_nam_devision_8f2404-11-2022-15-03-39-351.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\quan-baggy-nam-80004-11-2022-15-04-28-858.jpg",
+      "PackagePath": "staticwebassets\\img\\categoryProduct\\quan-baggy-nam-80004-11-2022-15-04-28-858.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\quan-tay-nam-tron04-11-2022-15-05-04-727.jpg",
+      "PackagePath": "staticwebassets\\img\\categoryProduct\\quan-tay-nam-tron04-11-2022-15-05-04-727.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\quanjeans04-11-2022-15-04-40-188.jpg",
+      "PackagePath": "staticwebassets\\img\\categoryProduct\\quanjeans04-11-2022-15-04-40-188.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\somi04-11-2022-15-04-49-788.jpg",
+      "PackagePath": "staticwebassets\\img\\categoryProduct\\somi04-11-2022-15-04-49-788.jpg"
+    },
+    {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\news\\12315-10-2022-22-08-21-094.jpg",
       "PackagePath": "staticwebassets\\img\\news\\12315-10-2022-22-08-21-094.jpg"
     },
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\news\\dnc18-10-2022-12-25-23-729.jpg",
       "PackagePath": "staticwebassets\\img\\news\\dnc18-10-2022-12-25-23-729.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\7b69e278-2396-467f-a913-47eb235a04-11-2022-16-25-33-614.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\7b69e278-2396-467f-a913-47eb235a04-11-2022-16-25-33-614.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\7b69e278-2396-467f-a913-47eb235a04-11-2022-16-32-06-825.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\7b69e278-2396-467f-a913-47eb235a04-11-2022-16-32-06-825.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\879e551d-1893-4109-975d-4fb6ece904-11-2022-16-25-33-633.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\879e551d-1893-4109-975d-4fb6ece904-11-2022-16-25-33-633.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\879e551d-1893-4109-975d-4fb6ece904-11-2022-16-32-06-812.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\879e551d-1893-4109-975d-4fb6ece904-11-2022-16-32-06-812.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\969aa5b2-0c00-4a6c-ac37-b8ae9c5904-11-2022-16-32-06-789.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\969aa5b2-0c00-4a6c-ac37-b8ae9c5904-11-2022-16-32-06-789.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\9a8b495b-3166-470b-8374-f5393f8f04-11-2022-16-32-06-819.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\9a8b495b-3166-470b-8374-f5393f8f04-11-2022-16-32-06-819.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\d0c10369-0b96-4c51-b10f-740de02904-11-2022-16-25-33-640.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\d0c10369-0b96-4c51-b10f-740de02904-11-2022-16-25-33-640.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\d0c10369-0b96-4c51-b10f-740de02904-11-2022-16-32-06-803.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\d0c10369-0b96-4c51-b10f-740de02904-11-2022-16-32-06-803.jpg"
     },
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\js\\role\\create-edit-role.js",
@@ -295,6 +507,22 @@
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\animate.css\\animate.compat.css",
+      "PackagePath": "staticwebassets\\lib\\animate.css\\animate.compat.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\animate.css\\animate.compat.min.css",
+      "PackagePath": "staticwebassets\\lib\\animate.css\\animate.compat.min.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\animate.css\\animate.css",
+      "PackagePath": "staticwebassets\\lib\\animate.css\\animate.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\animate.css\\animate.min.css",
+      "PackagePath": "staticwebassets\\lib\\animate.css\\animate.min.css"
     },
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\bootstrap-4.6.2-dist\\css\\bootstrap-grid.css",
@@ -609,6 +837,14 @@
       "PackagePath": "staticwebassets\\lib\\bs4-toast-snackbar\\scss\\toast-snackbar.scss"
     },
     {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
+    },
+    {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\font-awesome\\css\\all.css",
       "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.css"
     },
@@ -835,6 +1071,50 @@
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\masonry\\masonry.pkgd.min.js",
       "PackagePath": "staticwebassets\\lib\\masonry\\masonry.pkgd.min.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
     },
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\popper.js\\cjs\\enums.js",

@@ -21,12 +21,14 @@ namespace DACS2.Data.Entities
         }
         
         public string ProductName { get; set; } // tên sp
+        public string Description { get; set; } // tên sp
         public int? ImportPrice { get; set; } // giá nhập
         public int Price { get; set; }
         public int Amount { get; set; }
         public string Unit { get; set; } //đơn vị tính
         public int Sold { get; set; } // đã bán
         public string slug { get; set; }
+        public string? pathImgP { get; set; }
         public int IdProductCategory { get; set; }
         public int IdSuplier { get; set; }
         public Supplier supplier { get; set; }

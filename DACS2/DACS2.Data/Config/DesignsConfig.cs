@@ -13,6 +13,7 @@ namespace DACS2.Data.Config
     {
         public void Configure(EntityTypeBuilder<Designs> builder)
         {
+          
             builder.HasOne(m => m.product)
                 .WithMany(m => m.designs)
                 .HasForeignKey(m => m.IdProduct);

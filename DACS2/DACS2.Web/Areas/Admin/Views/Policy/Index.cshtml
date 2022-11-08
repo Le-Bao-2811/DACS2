@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DACS2.Web.Areas.Admin.ViewModel.Policy.ListPolicyVM>
+
+
+@if (User.IsInPermission(AuthConst.Policy.CREATE))
+{
+    <div class="my-2">
+        <a class="btn btn-primary" asp-action="Create">
+            <i class="fas fa-plus-circle"></i> &nbsp; Thêm mới chính sách
+        </a>
+    </div>
+}
+
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tiêu đề</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="fit">@item.Id</td>
+                    <td>@item.PolicyName</td>
+                    <td class="fit">
+                        @if (User.IsInPermission(AuthConst.Policy.DELETE))
+                        {
+                            <a asp-action="Delete" asp-route-id="@item.Id"
+                               class="btn btn-outline-secondary btn-sm"><i class="fas fa-trash"></i></a>
+                        }
+                        @if (User.IsInPermission(AuthConst.Policy.UPDATE))
+                        {
+
+                            <a class="btn btn-outline-secondary btn-sm" asp-action="Update" asp-route-id="@item.Id">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<partial name="_Pager" /></table>

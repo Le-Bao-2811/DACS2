@@ -1,0 +1,106 @@
+﻿@model DACS2.Web.Areas.Admin.ViewModel.Product.AddProductVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="ProductName" class="control-label"></label>
+                        <input asp-for="ProductName" class="form-control" />
+                        <span asp-validation-for="ProductName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ImportPrice" class="control-label"></label>
+                        <input asp-for="ImportPrice" class="form-control" />
+                        <span asp-validation-for="ImportPrice" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Price" class="control-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Unit" class="control-label"></label>
+                        <input asp-for="Unit" class="form-control" />
+                        <span asp-validation-for="Unit" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdProductCategory" class="control-label"></label>
+                        <select asp-for="IdProductCategory" class="form-control">
+                            <vc:list-product-category-view-components selected="null"></vc:list-product-category-view-components>
+                        </select> 
+                        <span asp-validation-for="IdProductCategory" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdSuplier" class="control-label"></label>
+                        <select asp-for="IdSuplier" class="form-control">
+                            <vc:list-supplier-view-components selected="null"></vc:list-supplier-view-components>
+                        </select>                         
+                        <span asp-validation-for="IdSuplier" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2 size">
+                    <div class="form-group">
+                        <label asp-for="Size" class="control-label"></label>
+                        <input asp-for="Size" class="form-control" />
+                        <span asp-validation-for="Size" class="text-danger"></span>
+                    </div>
+                    <a class="btn btn-primary add-size">Thêm size</a>
+                </div>
+                <div class="col-md-2 design">
+                    <div class="form-group">
+                        <label asp-for="Design" class="control-label"></label>
+                        <input asp-for="Design" class="form-control" />
+                        <span asp-validation-for="Design" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Amountdesign" class="control-label"></label>
+                        <input asp-for="Amountdesign" class="form-control" />
+                        <span asp-validation-for="Amountdesign" class="text-danger"></span>
+                    </div>
+                    <a class="btn btn-primary add-design">Thêm kiểu dáng</a>
+                </div>
+                <div class="col-md-2 color">
+                    <div class="form-group">
+                        <label asp-for="Color" class="control-label"></label>
+                        <input asp-for="Color" class="form-control" />
+                        <span asp-validation-for="Color" class="text-danger"></span>
+                    </div>
+                    <a class="btn btn-primary add-color">Thêm màu sắc</a>
+                </div>
+                <div class="col-md-2 image">
+                    <div class="form-group">
+                        <label asp-for="ImageP" class="control-label"></label>
+                        <input asp-for="ImageP" type="file" class="form-control" />
+                        <span asp-validation-for="ImageP" class="text-danger"></span>
+                    </div>
+                    <a class="btn btn-primary add-image">Thêm hình ảnh</a>
+                </div>
+            </div>                       
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-secondary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section scripts{ 
+    <script src="~/adminLTE/dist/js/product/add-product.js" asp-append-version="true"></script>
+}

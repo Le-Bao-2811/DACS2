@@ -1,11 +1,15 @@
 ﻿using AutoMapper;
 using DACS2.Data.Entities;
 using DACS2.Web.Areas.Admin.ViewModel.Account;
+using DACS2.Web.Areas.Admin.ViewModel.CategoryProduct;
 using DACS2.Web.Areas.Admin.ViewModel.News;
 using DACS2.Web.Areas.Admin.ViewModel.NewsCategory;
+using DACS2.Web.Areas.Admin.ViewModel.Policy;
+using DACS2.Web.Areas.Admin.ViewModel.Product;
 using DACS2.Web.Areas.Admin.ViewModel.Role;
 using DACS2.Web.Areas.Admin.ViewModel.Supplier;
 using DACS2.Web.Areas.Admin.ViewModel.Voucher;
+using DACS2.Web.ViewModels;
 
 namespace DACS2.Web.WebConfig
 {
@@ -17,7 +21,11 @@ namespace DACS2.Web.WebConfig
             CreateMap<CategoryNews,AddorUpdateCategoryNewsVM>().ReverseMap();
             CreateMap<News,AddorUpdateNewsVM>().ReverseMap();
             CreateMap<Voucher,AddorUpdateVocher>().ReverseMap();
-            
+            CreateMap<Supplier,AddorUpdateSupplerVM>().ReverseMap();
+            CreateMap<CategoryProduct,AddorUpdateCtProductVM>().ReverseMap();
+            CreateMap<Policy,AddorUpdatePolicyVM>().ReverseMap();
+            CreateMap<Product,AddProductVM>().ReverseMap();            
+            CreateMap<Product,DeltalProductVM>().ReverseMap();            
         }
         public static MapperConfiguration RoleIndexConf = new(mapper =>
         {
@@ -63,6 +71,23 @@ namespace DACS2.Web.WebConfig
         {
             // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
             mapper.CreateMap<Supplier, ListSupplierVM>();
+        });
+        public static MapperConfiguration CategoryProductIndexConf = new(mapper =>
+        {
+            // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
+            mapper.CreateMap<CategoryProduct, ListCategoryProductVM>();
+        });
+        public static MapperConfiguration PolicyIndexConf = new(mapper =>
+        {
+            // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
+            mapper.CreateMap<Policy, ListPolicyVM>();
+        });
+        public static MapperConfiguration ProductIndexConf = new(mapper =>
+        {
+            // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
+            mapper.CreateMap<Product, ListProductVM>()
+            .ForMember(uItem=>uItem.Suplier,opt=>opt.MapFrom(uS=>uS.supplier.SupplierName))
+            .ForMember(uItem=>uItem.ProductCategory,opt=>opt.MapFrom(uC=>uC.categoryProduct.CategoryName));
         });
     }
 }
