@@ -2,6 +2,7 @@
 using DACS2.Data.Reponsitory;
 using DACS2.Web.ViewModels.Cart;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.CompilerServices;
 
 namespace DACS2.Web.Controllers
 {
@@ -40,9 +41,35 @@ namespace DACS2.Web.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Shopping(CartProductVM model)
+        public IActionResult Shopping(ShoppingVM model)
         {
+            if(model != null)
+            {
+                Invoice invoice = new Invoice();
+                invoice.NameCustomer = model.Name;
+                invoice.Address = model.Location;
+                invoice.NumberPhone=model.NumberPhone;
+                var cookieList = Request.Cookies.Where(x => x.Key.Contains("products"))
+                .ToList();
+                foreach(var item in cookieList)
+                {
+                    int currentID = Convert.ToInt32(item.Key.Replace("products_", ""));
+                    var value=item.Value;
+                }
+            }    
             return Ok();
+        }
+        public async Task<IActionResult> AddVoucher(string voucher)
+        {
+            var data= await _repo.GetOneAsync<Voucher>(x=>x.VoucherName==voucher);
+            if (data != null)
+            {
+                return Ok(data);
+            }
+            else
+            {
+                return Ok(false);   
+            }
         }
     }
 }

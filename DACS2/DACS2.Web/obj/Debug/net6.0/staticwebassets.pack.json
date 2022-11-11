@@ -417,6 +417,46 @@
       "PackagePath": "staticwebassets\\adminLTE\\plugins\\icheck-bootstrap\\icheck-bootstrap.min.css"
     },
     {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\index.js",
+      "PackagePath": "staticwebassets\\awesome-notifications\\index.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\index.min.js",
+      "PackagePath": "staticwebassets\\awesome-notifications\\index.min.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\index.var.js",
+      "PackagePath": "staticwebassets\\awesome-notifications\\index.var.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\index.var.min.js",
+      "PackagePath": "staticwebassets\\awesome-notifications\\index.var.min.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\modern.js",
+      "PackagePath": "staticwebassets\\awesome-notifications\\modern.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\modern.min.js",
+      "PackagePath": "staticwebassets\\awesome-notifications\\modern.min.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\modern.var.js",
+      "PackagePath": "staticwebassets\\awesome-notifications\\modern.var.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\modern.var.min.js",
+      "PackagePath": "staticwebassets\\awesome-notifications\\modern.var.min.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\style.css",
+      "PackagePath": "staticwebassets\\awesome-notifications\\style.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\awesome-notifications\\style.min.css",
+      "PackagePath": "staticwebassets\\awesome-notifications\\style.min.css"
+    },
+    {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -495,6 +535,18 @@
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\d0c10369-0b96-4c51-b10f-740de02904-11-2022-16-32-06-803.jpg",
       "PackagePath": "staticwebassets\\img\\products\\d0c10369-0b96-4c51-b10f-740de02904-11-2022-16-32-06-803.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473589564_b78c19d7de3deefb609-11-2022-22-27-58-343.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\z3835473589564_b78c19d7de3deefb609-11-2022-22-27-58-343.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473592796_ea2eb68ed92eec6f109-11-2022-22-27-58-335.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\z3835473592796_ea2eb68ed92eec6f109-11-2022-22-27-58-335.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473608290_40b8401b046ff254c09-11-2022-22-27-58-313.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\z3835473608290_40b8401b046ff254c09-11-2022-22-27-58-313.jpg"
     },
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\js\\role\\create-edit-role.js",
@@ -2439,6 +2491,62 @@
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\summernote\\summernote.min.js",
       "PackagePath": "staticwebassets\\lib\\summernote\\summernote.min.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\toastr.js\\toastr.css",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\toastr.js\\toastr.js.map",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.js.map"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\toastr.js\\toastr.min.css",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.min.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\lib\\toastr.js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.min.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\AjaxLoader.gif",
+      "PackagePath": "staticwebassets\\owl-carousel\\AjaxLoader.gif"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\grabbing.png",
+      "PackagePath": "staticwebassets\\owl-carousel\\grabbing.png"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\owl-carousel\\owl.carousel.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\owl-carousel\\owl.carousel.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\owl-carousel\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\owl-carousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\owl.theme.css",
+      "PackagePath": "staticwebassets\\owl-carousel\\owl.theme.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\owl.theme.min.css",
+      "PackagePath": "staticwebassets\\owl-carousel\\owl.theme.min.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\owl.transitions.css",
+      "PackagePath": "staticwebassets\\owl-carousel\\owl.transitions.css"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\owl-carousel\\owl.transitions.min.css",
+      "PackagePath": "staticwebassets\\owl-carousel\\owl.transitions.min.css"
     },
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\summernote\\font\\summernote.eot",

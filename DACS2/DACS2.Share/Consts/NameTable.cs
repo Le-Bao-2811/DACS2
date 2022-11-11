@@ -12,7 +12,7 @@ namespace DACS2.Share.Consts
         public const string CategoryNewsTable = "CategoryNews";
         public const string CategoryProductTable = "CategoryProduct";
         public const string ColorTable = "Color";
-        public const string DesignsTable = " Designs";
+        public const string DesignsTable = "Designs";
         public const string ImageTable = "Image";
         public const string InvoiceTable = "Invoice";
         public const string InvoiceDetailsTable = "InvoiceDetails";

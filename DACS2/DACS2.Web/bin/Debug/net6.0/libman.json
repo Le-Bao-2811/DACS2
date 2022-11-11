@@ -29,6 +29,14 @@
     {
       "library": "owl-carousel@1.3.3",
       "destination": "wwwroot/owl-carousel/"
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/lib/toastr.js/"
+    },
+    {
+      "library": "awesome-notifications@3.1.3",
+      "destination": "wwwroot/awesome-notifications/"
     }
   ]
 }

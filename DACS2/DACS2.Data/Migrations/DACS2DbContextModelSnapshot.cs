@@ -181,7 +181,7 @@ namespace DACS2.Data.Migrations
 
                     b.HasIndex("IdProduct");
 
-                    b.ToTable(" Designs");
+                    b.ToTable("Designs");
                 });
 
             modelBuilder.Entity("DACS2.Data.Entities.Image", b =>
@@ -255,6 +255,10 @@ namespace DACS2.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("NameCustomer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumberPhone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -518,7 +522,7 @@ namespace DACS2.Data.Migrations
                             CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm  kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
-                            Table = " Designs"
+                            Table = "Designs"
                         },
                         new
                         {
@@ -527,7 +531,7 @@ namespace DACS2.Data.Migrations
                             CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
-                            Table = " Designs"
+                            Table = "Designs"
                         },
                         new
                         {
@@ -536,7 +540,7 @@ namespace DACS2.Data.Migrations
                             CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
-                            Table = " Designs"
+                            Table = "Designs"
                         },
                         new
                         {
@@ -545,7 +549,7 @@ namespace DACS2.Data.Migrations
                             CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
-                            Table = " Designs"
+                            Table = "Designs"
                         },
                         new
                         {
@@ -1406,25 +1410,25 @@ namespace DACS2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2022, 11, 4, 15, 33, 2, 203, DateTimeKind.Local).AddTicks(6646),
+                            CreateAt = new DateTime(2022, 11, 11, 14, 26, 51, 744, DateTimeKind.Local).AddTicks(8569),
                             StatusName = "Đang chờ xử lý"
                         },
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2022, 11, 4, 15, 33, 2, 203, DateTimeKind.Local).AddTicks(6646),
+                            CreateAt = new DateTime(2022, 11, 11, 14, 26, 51, 744, DateTimeKind.Local).AddTicks(8569),
                             StatusName = "Đang lấy hàng"
                         },
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2022, 11, 4, 15, 33, 2, 203, DateTimeKind.Local).AddTicks(6646),
+                            CreateAt = new DateTime(2022, 11, 11, 14, 26, 51, 744, DateTimeKind.Local).AddTicks(8569),
                             StatusName = "Đang giao hàng"
                         },
                         new
                         {
                             Id = 4,
-                            CreateAt = new DateTime(2022, 11, 4, 15, 33, 2, 203, DateTimeKind.Local).AddTicks(6646),
+                            CreateAt = new DateTime(2022, 11, 11, 14, 26, 51, 744, DateTimeKind.Local).AddTicks(8569),
                             StatusName = "Giao hàng thành công"
                         });
                 });

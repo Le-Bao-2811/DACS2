@@ -38,20 +38,26 @@
                     </div>
                     <small class="pt-1">(99 Reviews)</small>
                 </div>
-                <h3 class="font-weight-semi-bold mb-4">@Model.Price</h3>
+                <h3 class="font-weight-semi-bold mb-4">@Model.Price.ToString("#,##0") VNĐ</h3>
                 <p class="mb-4">
-                  @Model.Description
+                    @Model.Description
                 </p>
                 <div class="d-flex mb-3">
                     <strong class="text-dark mr-3">Sizes:</strong>
                     <form>
-                       <vc:client-list-size-view-components id="@Model.Id"/>
+                        <vc:client-list-size-view-components id="@Model.Id" />
                     </form>
                 </div>
                 <div class="d-flex mb-4">
-                    <strong class="text-dark mr-3">Colors:</strong>
+                    <strong class="text-dark mr-3">Màu sắc:</strong>
                     <form>
                         <vc:client-list-color-view-components id="@Model.Id" />
+                    </form>
+                </div>
+                <div class="d-flex mb-4">
+                    <strong class="text-dark mr-3">Kiểu dáng:</strong>
+                    <form>
+                        <vc:client-list-designs-view-components id="@Model.Id" />
                     </form>
                 </div>
                 <div class="d-flex align-items-center mb-4 pt-2">
@@ -61,7 +67,7 @@
                                 <i class="fa fa-minus"></i>
                             </button>
                         </div>
-                        <input type="text" class="form-control bg-secondary border-0 text-center" value="1">
+                        <input type="text" class="form-control bg-secondary border-0 text-center amount" value="1">
                         <div class="input-group-btn">
                             <button class="btn btn-primary btn-plus">
                                 <i class="fa fa-plus"></i>
