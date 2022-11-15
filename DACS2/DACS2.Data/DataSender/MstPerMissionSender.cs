@@ -337,18 +337,10 @@ namespace DACS2.Data.DataSender
                     Code = "DELETE",
                     Table = NameTable.InvoiceDetailsTable,
                     GroupName = groupName,
-                    Desc = "Xóa đơn hàng",
-                    CreateAt = now
-                },
-                new MstPerMission
-                {
-                    Id = AuthConst.InvoiceDetails.VIEW_LIST,
-                    Code = "VIEW_LIST",
-                    Table = NameTable.InvoiceDetailsTable,
-                    GroupName = groupName,
-                    Desc = "Xem chi tiết danh sách đơn hàng",
+                    Desc = "Xóa sản phẩm",
                     CreateAt = now
                 }
+             
             );
             #endregion
             #region Data liên quan đến bảng News

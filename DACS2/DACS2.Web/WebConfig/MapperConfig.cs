@@ -10,6 +10,8 @@ using DACS2.Web.Areas.Admin.ViewModel.Role;
 using DACS2.Web.Areas.Admin.ViewModel.Supplier;
 using DACS2.Web.Areas.Admin.ViewModel.Voucher;
 using DACS2.Web.ViewModels;
+using DACS2.Web.ViewModels.Auth;
+using DACS2.Web.ViewModels.Client;
 
 namespace DACS2.Web.WebConfig
 {
@@ -25,7 +27,8 @@ namespace DACS2.Web.WebConfig
             CreateMap<CategoryProduct,AddorUpdateCtProductVM>().ReverseMap();
             CreateMap<Policy,AddorUpdatePolicyVM>().ReverseMap();
             CreateMap<Product,AddProductVM>().ReverseMap();            
-            CreateMap<Product,DeltalProductVM>().ReverseMap();            
+            CreateMap<User,ClientSignUpVM>().ReverseMap();            
+                        
         }
         public static MapperConfiguration RoleIndexConf = new(mapper =>
         {
@@ -88,6 +91,11 @@ namespace DACS2.Web.WebConfig
             mapper.CreateMap<Product, ListProductVM>()
             .ForMember(uItem=>uItem.Suplier,opt=>opt.MapFrom(uS=>uS.supplier.SupplierName))
             .ForMember(uItem=>uItem.ProductCategory,opt=>opt.MapFrom(uC=>uC.categoryProduct.CategoryName));
+        });
+        public static MapperConfiguration ClientListProductsIndexConf = new(mapper =>
+        {
+            // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
+            mapper.CreateMap<Product, ClientListAllProducts>();
         });
     }
 }

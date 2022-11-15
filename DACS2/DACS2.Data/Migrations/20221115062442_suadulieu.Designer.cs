@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DACS2.Data.Migrations
 {
     [DbContext(typeof(DACS2DbContext))]
-    [Migration("20221021150536_taobang")]
-    partial class taobang
+    [Migration("20221115062442_suadulieu")]
+    partial class suadulieu
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -92,6 +92,9 @@ namespace DACS2.Data.Migrations
                     b.Property<DateTime?>("UpdateAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("pathImg")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("CategoryProduct");
@@ -138,49 +141,6 @@ namespace DACS2.Data.Migrations
                     b.HasIndex("IdProduct");
 
                     b.ToTable("Color");
-                });
-
-            modelBuilder.Entity("DACS2.Data.Entities.Designs", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("CreateAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("CreateBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("DeleteAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DesignsName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DetleteBy")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("DislayOrder")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdProduct")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdateAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdProduct");
-
-                    b.ToTable(" Designs");
                 });
 
             modelBuilder.Entity("DACS2.Data.Entities.Image", b =>
@@ -257,6 +217,10 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("NumberPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("StatusId")
                         .HasColumnType("int");
 
@@ -265,6 +229,9 @@ namespace DACS2.Data.Migrations
 
                     b.Property<DateTime?>("UpdateAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("useVoucher")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -276,10 +243,10 @@ namespace DACS2.Data.Migrations
             modelBuilder.Entity("DACS2.Data.Entities.InvoiceDetails", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("IdInvoice")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("Amount")
                         .HasColumnType("int");
@@ -288,9 +255,8 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Designs")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IdInvoice")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Money")
                         .HasColumnType("decimal(18,2)");
@@ -303,7 +269,7 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id", "IdInvoice");
+                    b.HasKey("Id");
 
                     b.HasIndex("IdInvoice");
 
@@ -517,7 +483,7 @@ namespace DACS2.Data.Migrations
                             CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Thêm  kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
-                            Table = " Designs"
+                            Table = "Designs"
                         },
                         new
                         {
@@ -526,7 +492,7 @@ namespace DACS2.Data.Migrations
                             CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xóa kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
-                            Table = " Designs"
+                            Table = "Designs"
                         },
                         new
                         {
@@ -535,7 +501,7 @@ namespace DACS2.Data.Migrations
                             CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Sửa kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
-                            Table = " Designs"
+                            Table = "Designs"
                         },
                         new
                         {
@@ -544,7 +510,7 @@ namespace DACS2.Data.Migrations
                             CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desc = "Xem danh sách kiểu dáng sản phẩm",
                             GroupName = "Quản lý kiểu dáng sản phẩm",
-                            Table = " Designs"
+                            Table = "Designs"
                         },
                         new
                         {
@@ -623,16 +589,7 @@ namespace DACS2.Data.Migrations
                             Id = 8008,
                             Code = "DELETE",
                             CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Desc = "Xóa đơn hàng",
-                            GroupName = "Quản lý giỏ hàng",
-                            Table = "InvoiceDetails"
-                        },
-                        new
-                        {
-                            Id = 8001,
-                            Code = "VIEW_LIST",
-                            CreateAt = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Desc = "Xem chi tiết danh sách đơn hàng",
+                            Desc = "Xóa sản phẩm",
                             GroupName = "Quản lý giỏ hàng",
                             Table = "InvoiceDetails"
                         },
@@ -1186,6 +1143,9 @@ namespace DACS2.Data.Migrations
                     b.Property<DateTime?>("UpdateAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("pathImgP")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("slug")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1402,25 +1362,25 @@ namespace DACS2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2022, 10, 21, 22, 5, 36, 339, DateTimeKind.Local).AddTicks(5583),
+                            CreateAt = new DateTime(2022, 11, 15, 13, 24, 41, 677, DateTimeKind.Local).AddTicks(1265),
                             StatusName = "Đang chờ xử lý"
                         },
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2022, 10, 21, 22, 5, 36, 339, DateTimeKind.Local).AddTicks(5583),
+                            CreateAt = new DateTime(2022, 11, 15, 13, 24, 41, 677, DateTimeKind.Local).AddTicks(1265),
                             StatusName = "Đang lấy hàng"
                         },
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2022, 10, 21, 22, 5, 36, 339, DateTimeKind.Local).AddTicks(5583),
+                            CreateAt = new DateTime(2022, 11, 15, 13, 24, 41, 677, DateTimeKind.Local).AddTicks(1265),
                             StatusName = "Đang giao hàng"
                         },
                         new
                         {
                             Id = 4,
-                            CreateAt = new DateTime(2022, 10, 21, 22, 5, 36, 339, DateTimeKind.Local).AddTicks(5583),
+                            CreateAt = new DateTime(2022, 11, 15, 13, 24, 41, 677, DateTimeKind.Local).AddTicks(1265),
                             StatusName = "Giao hàng thành công"
                         });
                 });
@@ -1620,17 +1580,6 @@ namespace DACS2.Data.Migrations
                     b.Navigation("product");
                 });
 
-            modelBuilder.Entity("DACS2.Data.Entities.Designs", b =>
-                {
-                    b.HasOne("DACS2.Data.Entities.Product", "product")
-                        .WithMany("designs")
-                        .HasForeignKey("IdProduct")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("product");
-                });
-
             modelBuilder.Entity("DACS2.Data.Entities.Image", b =>
                 {
                     b.HasOne("DACS2.Data.Entities.Product", "Product")
@@ -1758,8 +1707,6 @@ namespace DACS2.Data.Migrations
             modelBuilder.Entity("DACS2.Data.Entities.Product", b =>
                 {
                     b.Navigation("colors");
-
-                    b.Navigation("designs");
 
                     b.Navigation("images");
 

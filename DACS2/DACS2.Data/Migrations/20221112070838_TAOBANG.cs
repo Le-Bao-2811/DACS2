@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DACS2.Data.Migrations
 {
-    public partial class taobang : Migration
+    public partial class TAOBANG : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -35,6 +35,7 @@ namespace DACS2.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoryName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    pathImg = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     UpdateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -312,6 +313,7 @@ namespace DACS2.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NameCustomer = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NumberPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TotalMoney = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     StatusId = table.Column<int>(type: "int", nullable: false),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -346,6 +348,7 @@ namespace DACS2.Data.Migrations
                     Unit = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Sold = table.Column<int>(type: "int", nullable: false),
                     slug = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    pathImgP = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IdProductCategory = table.Column<int>(type: "int", nullable: false),
                     IdSuplier = table.Column<int>(type: "int", nullable: false),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -376,49 +379,22 @@ namespace DACS2.Data.Migrations
                 name: "InvoiceDetails",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false),
-                    IdInvoice = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Amount = table.Column<int>(type: "int", nullable: false),
                     Money = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Designs = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IdInvoice = table.Column<int>(type: "int", nullable: false),
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Size = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_InvoiceDetails", x => new { x.Id, x.IdInvoice });
+                    table.PrimaryKey("PK_InvoiceDetails", x => x.Id);
                     table.ForeignKey(
                         name: "FK_InvoiceDetails_Invoice_IdInvoice",
                         column: x => x.IdInvoice,
                         principalTable: "Invoice",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: " Designs",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DesignsName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Amount = table.Column<int>(type: "int", nullable: false),
-                    IdProduct = table.Column<int>(type: "int", nullable: false),
-                    CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreateBy = table.Column<int>(type: "int", nullable: true),
-                    DeleteAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DetleteBy = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DislayOrder = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ Designs", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_ Designs_Product_IdProduct",
-                        column: x => x.IdProduct,
-                        principalTable: "Product",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -534,10 +510,10 @@ namespace DACS2.Data.Migrations
                     { 4003, "CREATE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Thêm màu sản phẩm", null, null, "Quản lý màu sản phẩm", "Color", null },
                     { 4004, "UPDATE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Sửa màu sản phẩm", null, null, "Quản lý màu sản phẩm", "Color", null },
                     { 4008, "DELETE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Xóa màu sản phẩm", null, null, "Quản lý màu sản phẩm", "Color", null },
-                    { 5001, "VIEW_LIST", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Xem danh sách kiểu dáng sản phẩm", null, null, "Quản lý kiểu dáng sản phẩm", " Designs", null },
-                    { 5003, "CREATE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Thêm  kiểu dáng sản phẩm", null, null, "Quản lý kiểu dáng sản phẩm", " Designs", null },
-                    { 5004, "UPDATE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Sửa kiểu dáng sản phẩm", null, null, "Quản lý kiểu dáng sản phẩm", " Designs", null },
-                    { 5008, "DELETE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Xóa kiểu dáng sản phẩm", null, null, "Quản lý kiểu dáng sản phẩm", " Designs", null },
+                    { 5001, "VIEW_LIST", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Xem danh sách kiểu dáng sản phẩm", null, null, "Quản lý kiểu dáng sản phẩm", "Designs", null },
+                    { 5003, "CREATE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Thêm  kiểu dáng sản phẩm", null, null, "Quản lý kiểu dáng sản phẩm", "Designs", null },
+                    { 5004, "UPDATE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Sửa kiểu dáng sản phẩm", null, null, "Quản lý kiểu dáng sản phẩm", "Designs", null },
+                    { 5008, "DELETE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Xóa kiểu dáng sản phẩm", null, null, "Quản lý kiểu dáng sản phẩm", "Designs", null },
                     { 6001, "VIEW_LIST", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Xem danh sách hình ảnh sản phẩm", null, null, "Quản lý hình sản phẩm", "Image", null },
                     { 6003, "CREATE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Thêm  hình ảnh sản phẩm", null, null, "Quản lý hình sản phẩm", "Image", null },
                     { 6004, "UPDATE", new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Sửa hình ảnh sản phẩm", null, null, "Quản lý hình sản phẩm", "Image", null },
@@ -599,16 +575,11 @@ namespace DACS2.Data.Migrations
                 columns: new[] { "Id", "CreateAt", "CreateBy", "DeleteAt", "DetleteBy", "DislayOrder", "StatusName", "UpdateAt" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2022, 10, 21, 22, 5, 36, 339, DateTimeKind.Local).AddTicks(5583), null, null, null, null, "Đang chờ xử lý", null },
-                    { 2, new DateTime(2022, 10, 21, 22, 5, 36, 339, DateTimeKind.Local).AddTicks(5583), null, null, null, null, "Đang lấy hàng", null },
-                    { 3, new DateTime(2022, 10, 21, 22, 5, 36, 339, DateTimeKind.Local).AddTicks(5583), null, null, null, null, "Đang giao hàng", null },
-                    { 4, new DateTime(2022, 10, 21, 22, 5, 36, 339, DateTimeKind.Local).AddTicks(5583), null, null, null, null, "Giao hàng thành công", null }
+                    { 1, new DateTime(2022, 11, 12, 14, 8, 38, 643, DateTimeKind.Local).AddTicks(4921), null, null, null, null, "Đang chờ xử lý", null },
+                    { 2, new DateTime(2022, 11, 12, 14, 8, 38, 643, DateTimeKind.Local).AddTicks(4921), null, null, null, null, "Đang lấy hàng", null },
+                    { 3, new DateTime(2022, 11, 12, 14, 8, 38, 643, DateTimeKind.Local).AddTicks(4921), null, null, null, null, "Đang giao hàng", null },
+                    { 4, new DateTime(2022, 11, 12, 14, 8, 38, 643, DateTimeKind.Local).AddTicks(4921), null, null, null, null, "Giao hàng thành công", null }
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ Designs_IdProduct",
-                table: " Designs",
-                column: "IdProduct");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Color_IdProduct",
@@ -668,9 +639,6 @@ namespace DACS2.Data.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: " Designs");
-
             migrationBuilder.DropTable(
                 name: "Color");
 

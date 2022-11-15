@@ -17,7 +17,6 @@ namespace DACS2.Data.Entities
         public int Amount { get; set; }
         public decimal Money { get; set; }
         public int IdInvoice { get; set; }
-        public string Designs { get; set; }
         public string Color { get; set; }
         public string Size { get; set; }
         public Invoice invoice { get; set; }

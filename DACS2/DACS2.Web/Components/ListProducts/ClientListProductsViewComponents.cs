@@ -14,7 +14,7 @@ namespace DACS2.Web.Components.ListProducts
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var data = await repository.GetAll<Product>().ToListAsync();
+            var data = await repository.GetAll<Product>().Take(10).ToListAsync();
             return View(data);
         }
     }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o5e33xVuoQAbUUmbFYJHNv7HjcYXtIsCHI9Snurleek=",
+  "Hash": "UFUc7ocVbwK6OjCcS1mPcQwlrHix1Q3S8b2H3HikP+8=",
   "Source": "DACS2.Web",
   "BasePath": "_content/DACS2.Web",
   "Mode": "Default",
@@ -1411,6 +1411,23 @@
       "OriginalItemSpec": "wwwroot\\ClientTLE\\Cart.js"
     },
     {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\filterdata.js",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "ClientTLE/filterdata.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ClientTLE\\filterdata.js"
+    },
+    {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\ClientTLE\\img\\carousel-1.jpg",
       "SourceId": "DACS2.Web",
       "SourceType": "Discovered",
@@ -2040,6 +2057,40 @@
       "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\ao_khoac_ni_nam_devision_8f2404-11-2022-15-03-39-351.jpg"
     },
     {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\ao_khoac_ni_nam_devision_8f2412-11-2022-14-11-19-958.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/categoryProduct/ao_khoac_ni_nam_devision_8f2412-11-2022-14-11-19-958.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\ao_khoac_ni_nam_devision_8f2412-11-2022-14-11-19-958.jpg"
+    },
+    {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\ao_khoac_ni_nam_devision_8f2412-11-2022-14-12-05-785.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/categoryProduct/ao_khoac_ni_nam_devision_8f2412-11-2022-14-12-05-785.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\ao_khoac_ni_nam_devision_8f2412-11-2022-14-12-05-785.jpg"
+    },
+    {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\ao-khoachoodie-tron-304-11-2022-15-04-14-456.jpg",
       "SourceId": "DACS2.Web",
       "SourceType": "Discovered",
@@ -2055,6 +2106,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\ao-khoachoodie-tron-304-11-2022-15-04-14-456.jpg"
+    },
+    {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\ao-khoachoodie-tron-312-11-2022-14-15-19-823.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/categoryProduct/ao-khoachoodie-tron-312-11-2022-14-15-19-823.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\ao-khoachoodie-tron-312-11-2022-14-15-19-823.jpg"
     },
     {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\CDL10_104-11-2022-15-03-08-504.jpg",
@@ -2074,6 +2142,23 @@
       "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\CDL10_104-11-2022-15-03-08-504.jpg"
     },
     {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\CDL10_112-11-2022-14-11-30-454.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/categoryProduct/CDL10_112-11-2022-14-11-30-454.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\CDL10_112-11-2022-14-11-30-454.jpg"
+    },
+    {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\quan-baggy-nam-80004-11-2022-15-04-28-858.jpg",
       "SourceId": "DACS2.Web",
       "SourceType": "Discovered",
@@ -2091,6 +2176,23 @@
       "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\quan-baggy-nam-80004-11-2022-15-04-28-858.jpg"
     },
     {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\quan-baggy-nam-80012-11-2022-14-11-42-212.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/categoryProduct/quan-baggy-nam-80012-11-2022-14-11-42-212.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\quan-baggy-nam-80012-11-2022-14-11-42-212.jpg"
+    },
+    {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\quanjeans04-11-2022-15-04-40-188.jpg",
       "SourceId": "DACS2.Web",
       "SourceType": "Discovered",
@@ -2106,6 +2208,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\quanjeans04-11-2022-15-04-40-188.jpg"
+    },
+    {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\quanjeans12-11-2022-14-11-56-967.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/categoryProduct/quanjeans12-11-2022-14-11-56-967.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\categoryProduct\\quanjeans12-11-2022-14-11-56-967.jpg"
     },
     {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\categoryProduct\\quan-tay-nam-tron04-11-2022-15-05-04-727.jpg",
@@ -2176,6 +2295,23 @@
       "OriginalItemSpec": "wwwroot\\img\\news\\dnc18-10-2022-12-25-23-729.jpg"
     },
     {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\_MG_763212-11-2022-14-20-25-669.JPG",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/_MG_763212-11-2022-14-20-25-669.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\_MG_763212-11-2022-14-20-25-669.JPG"
+    },
+    {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\7b69e278-2396-467f-a913-47eb235a04-11-2022-16-25-33-614.jpg",
       "SourceId": "DACS2.Web",
       "SourceType": "Discovered",
@@ -2208,6 +2344,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\products\\7b69e278-2396-467f-a913-47eb235a04-11-2022-16-32-06-825.jpg"
+    },
+    {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\7b69e278-2396-467f-a913-47eb235a12-11-2022-14-16-34-414.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/7b69e278-2396-467f-a913-47eb235a12-11-2022-14-16-34-414.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\7b69e278-2396-467f-a913-47eb235a12-11-2022-14-16-34-414.jpg"
     },
     {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\879e551d-1893-4109-975d-4fb6ece904-11-2022-16-25-33-633.jpg",
@@ -2244,6 +2397,23 @@
       "OriginalItemSpec": "wwwroot\\img\\products\\879e551d-1893-4109-975d-4fb6ece904-11-2022-16-32-06-812.jpg"
     },
     {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\879e551d-1893-4109-975d-4fb6ece912-11-2022-14-16-34-403.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/879e551d-1893-4109-975d-4fb6ece912-11-2022-14-16-34-403.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\879e551d-1893-4109-975d-4fb6ece912-11-2022-14-16-34-403.jpg"
+    },
+    {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\969aa5b2-0c00-4a6c-ac37-b8ae9c5904-11-2022-16-32-06-789.jpg",
       "SourceId": "DACS2.Web",
       "SourceType": "Discovered",
@@ -2261,6 +2431,23 @@
       "OriginalItemSpec": "wwwroot\\img\\products\\969aa5b2-0c00-4a6c-ac37-b8ae9c5904-11-2022-16-32-06-789.jpg"
     },
     {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\969aa5b2-0c00-4a6c-ac37-b8ae9c5912-11-2022-14-16-34-390.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/969aa5b2-0c00-4a6c-ac37-b8ae9c5912-11-2022-14-16-34-390.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\969aa5b2-0c00-4a6c-ac37-b8ae9c5912-11-2022-14-16-34-390.jpg"
+    },
+    {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\9a8b495b-3166-470b-8374-f5393f8f04-11-2022-16-32-06-819.jpg",
       "SourceId": "DACS2.Web",
       "SourceType": "Discovered",
@@ -2276,6 +2463,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\products\\9a8b495b-3166-470b-8374-f5393f8f04-11-2022-16-32-06-819.jpg"
+    },
+    {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\9a8b495b-3166-470b-8374-f5393f8f12-11-2022-14-16-34-409.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/9a8b495b-3166-470b-8374-f5393f8f12-11-2022-14-16-34-409.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\9a8b495b-3166-470b-8374-f5393f8f12-11-2022-14-16-34-409.jpg"
     },
     {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\d0c10369-0b96-4c51-b10f-740de02904-11-2022-16-25-33-640.jpg",
@@ -2312,6 +2516,23 @@
       "OriginalItemSpec": "wwwroot\\img\\products\\d0c10369-0b96-4c51-b10f-740de02904-11-2022-16-32-06-803.jpg"
     },
     {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\d0c10369-0b96-4c51-b10f-740de02912-11-2022-14-16-34-397.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/d0c10369-0b96-4c51-b10f-740de02912-11-2022-14-16-34-397.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\d0c10369-0b96-4c51-b10f-740de02912-11-2022-14-16-34-397.jpg"
+    },
+    {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473589564_b78c19d7de3deefb609-11-2022-22-27-58-343.jpg",
       "SourceId": "DACS2.Web",
       "SourceType": "Discovered",
@@ -2327,6 +2548,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\products\\z3835473589564_b78c19d7de3deefb609-11-2022-22-27-58-343.jpg"
+    },
+    {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473589564_b78c19d7de3deefb612-11-2022-14-20-25-625.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/z3835473589564_b78c19d7de3deefb612-11-2022-14-20-25-625.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\z3835473589564_b78c19d7de3deefb612-11-2022-14-20-25-625.jpg"
     },
     {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473592796_ea2eb68ed92eec6f109-11-2022-22-27-58-335.jpg",
@@ -2346,6 +2584,40 @@
       "OriginalItemSpec": "wwwroot\\img\\products\\z3835473592796_ea2eb68ed92eec6f109-11-2022-22-27-58-335.jpg"
     },
     {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473592796_ea2eb68ed92eec6f112-11-2022-14-20-25-663.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/z3835473592796_ea2eb68ed92eec6f112-11-2022-14-20-25-663.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\z3835473592796_ea2eb68ed92eec6f112-11-2022-14-20-25-663.jpg"
+    },
+    {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473598463_9f633bdad8c8b875f12-11-2022-14-20-25-658.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/z3835473598463_9f633bdad8c8b875f12-11-2022-14-20-25-658.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\z3835473598463_9f633bdad8c8b875f12-11-2022-14-20-25-658.jpg"
+    },
+    {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473608290_40b8401b046ff254c09-11-2022-22-27-58-313.jpg",
       "SourceId": "DACS2.Web",
       "SourceType": "Discovered",
@@ -2361,6 +2633,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\products\\z3835473608290_40b8401b046ff254c09-11-2022-22-27-58-313.jpg"
+    },
+    {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473608290_40b8401b046ff254c12-11-2022-14-20-25-644.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/z3835473608290_40b8401b046ff254c12-11-2022-14-20-25-644.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\z3835473608290_40b8401b046ff254c12-11-2022-14-20-25-644.jpg"
+    },
+    {
+      "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835473608290_40b8401b046ff254c12-11-2022-14-20-25-652.jpg",
+      "SourceId": "DACS2.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\",
+      "BasePath": "_content/DACS2.Web",
+      "RelativePath": "img/products/z3835473608290_40b8401b046ff254c12-11-2022-14-20-25-652.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\z3835473608290_40b8401b046ff254c12-11-2022-14-20-25-652.jpg"
     },
     {
       "Identity": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\js\\role\\create-edit-role.js",

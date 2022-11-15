@@ -27,8 +27,7 @@ namespace DACS2.Web.Areas.Admin.ViewModel.Product
         public List<string> Size { get; set; }
         [DisplayName("Màu sắc")]
         public List<string> Color { get; set; }
-        [DisplayName("Kiểu dáng")]
-        public List<string> Design { get; set; }
+        
         [DisplayName("Hình ảnh")]
         public List<IFormFile> Image { get; set; }
         public List<string> PathImage { get; set; }

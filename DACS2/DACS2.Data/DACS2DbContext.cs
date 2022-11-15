@@ -20,7 +20,6 @@ namespace DACS2.Data
         public DbSet<CategoryNews> categoryNews{ get; set; }
         public DbSet<CategoryProduct> categoryProducts { get; set; }
         public DbSet<Color>colors { get; set; }
-        public DbSet<Designs> designs { get; set; }
         public DbSet<Image> images { get; set; }
         public DbSet<Invoice> invoices { get; set; }
         public DbSet<InvoiceDetails> InvoiceDetails { get; set; }
@@ -46,7 +45,6 @@ namespace DACS2.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ColorConfig());
-            modelBuilder.ApplyConfiguration(new DesignsConfig());
             modelBuilder.ApplyConfiguration(new ImageConfig());
             modelBuilder.ApplyConfiguration(new InvoiceDetailsConfig());
             modelBuilder.ApplyConfiguration(new NewsConfig());

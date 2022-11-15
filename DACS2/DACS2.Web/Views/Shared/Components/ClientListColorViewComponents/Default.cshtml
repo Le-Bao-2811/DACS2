@@ -2,7 +2,7 @@
 @foreach (var item in Model)
 {
     <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" value="@item.ColorName" id="color-@item.Id" name="color">
+        <input type="radio" class="custom-control-input" value="@item.ColorName" data-id="@item.Id" id="color-@item.Id" name="color">
         <label class="custom-control-label" for="color-@item.Id">@item.ColorName</label>
     </div>
 }

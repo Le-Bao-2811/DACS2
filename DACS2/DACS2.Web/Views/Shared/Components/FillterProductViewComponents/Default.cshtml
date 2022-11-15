@@ -1,0 +1,18 @@
+﻿@model DACS2.Web.Components.FillterPrice.FillterPriceVM
+
+
+@foreach (var item in Model.Items)
+{
+    <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+        <input hidden class="custom-control-input" value="@item.To-@item.From" data-id="@item.Id" id="price-@item.Id" name="fillter">
+        @if (item.From == 0)
+        {
+            <a style="color:black" asp-route-fillter="@item.To-@item.From" value="">@item.To.ToString("#,##0") VNĐ -  Trở lên</a>
+        }
+        else
+        {
+            <a style="color:black" asp-route-fillter="@item.To-@item.From" value="">@item.To.ToString("#,##0") VNĐ -  @item.From.ToString("#,##0") VNĐ</a>
+        }
+    </div>
+}
+

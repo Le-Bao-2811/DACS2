@@ -183,16 +183,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxTaG9wcGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Home/AllProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Home/DeltailsProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWx0YWlsc1Byb2R1Y3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/ClientCPViewComponents/Default.cshtml]
@@ -203,10 +203,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2xpZW50TGlzdENvbG9yVmlld0NvbXBvbmVudHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/ClientListDesignsViewComponents/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2xpZW50TGlzdERlc2lnbnNWaWV3Q29tcG9uZW50c1xEZWZhdWx0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/ClientListProductsViewComponents/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2xpZW50TGlzdFByb2R1Y3RzVmlld0NvbXBvbmVudHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -215,12 +211,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2xpZW50TGlzdFNpemVWaWV3Q29tcG9uZW50c1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/FillterProductViewComponents/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRmlsbHRlclByb2R1Y3RWaWV3Q29tcG9uZW50c1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Components/ListImageViewComponents/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGlzdEltYWdlVmlld0NvbXBvbmVudHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/_Pager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DACS2/BE/DACS2/DACS2/DACS2.Web/Views/Shared/_ValidationScriptsPartial.cshtml]

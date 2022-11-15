@@ -6,6 +6,8 @@
         public string ProductName { get; set; }
         public int Price { get; set; }
         public string? pathImgP { get; set; }
+        public string color { get; set; }
+        public string size { get; set; }
 
     }
 }

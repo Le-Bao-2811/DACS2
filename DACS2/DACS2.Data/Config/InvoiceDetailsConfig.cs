@@ -13,11 +13,7 @@ namespace DACS2.Data.Config
     {
         public void Configure(EntityTypeBuilder<InvoiceDetails> builder)
         {
-            builder.HasKey(x => new
-            {
-                x.Id,
-                x.IdInvoice
-            });
+
             builder.HasOne(m => m.invoice)
                .WithMany(m => m.InvoiceDetails)
                .HasForeignKey(m => m.IdInvoice);

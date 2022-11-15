@@ -77,54 +77,46 @@ namespace DACS2.Web.Areas.Admin.Controllers
             List<Size> sizes = new List<Size>();
             foreach (var size in model.Size)
             {
-                Size data = new Size();
-                data.SizeName = size;
-                sizes.Add(data);
+                Size data1 = new Size();
+                data1.SizeName = size;
+                sizes.Add(data1);
             }
             // thêm màu
             List<Color> colors = new List<Color>();
-            foreach (var size in model.Color)
+            dataproduct.Amount = 0;
+            for (int i = 0; i < model.Color.Count(); i++)
             {
-                Color data = new Color();
-                data.ColorName = size;
-                colors.Add(data);
+                Color data2 = new Color();
+                data2.ColorName = model.Color[i];
+                data2.Amount = model.Amountdesign[i];
+                colors.Add(data2);
+
+                dataproduct.Amount += model.Amountdesign[i];
             }
             // thêm hình ảnh
             List<Image> images = new List<Image>();
             foreach(var item in model.Image)
             {
-                Image data = new Image();
+                Image data3 = new Image();
                 if (model.Image != null)
                 {
                     string image = UploadImgAndReturnPath(item, "/img/products/");
                     image = image.Split('/').Last();
-                    data.pathImage = image;
+                    data3.pathImage = image;
                 }
-                images.Add(data);
+                images.Add(data3);
             }
-
-            // cập nhật số lượng
-            var categoryProduct = await _repo.FindAsync<CategoryProduct>(model.IdProductCategory);
-
-            // thêm kiểu dáng
-            List<Designs> designs = new List<Designs>();
-            for (int i=0;i<model.Design.Count();i++)
-            {
-                Designs data = new Designs();
-                data.DesignsName = model.Design[i];
-                data.Amount = model.Amountdesign[i];               
-                designs.Add(data);
-
-                categoryProduct.SoLuong += model.Amountdesign[i];
-            }
-            await _repo.UpdateAsync(categoryProduct);
 
           
-            dataproduct.designs = designs;
             dataproduct.images = images;
             dataproduct.sizes = sizes;
             dataproduct.colors=colors;
             await _repo.AddAsync<Product>(dataproduct);
+            // cap nhật bản categoryproduct
+            var data = await _repo.FindAsync<CategoryProduct>(dataproduct.IdProductCategory);
+            data.SoLuong += 1;
+            await _repo.UpdateAsync(data);
+
             return RedirectToAction("Index");
         }
         [AppAuthorize(AuthConst.Product.DELETE)]

@@ -19,6 +19,7 @@ namespace DACS2.Data.Entities
         public string NameCustomer { get; set; }
         public string Address { get; set; }
         public string NumberPhone { get; set; }
+        public string? useVoucher { get; set; }
         public decimal TotalMoney { get; set; }
         public int StatusId { get; set; }
         public Status status { get; set; }

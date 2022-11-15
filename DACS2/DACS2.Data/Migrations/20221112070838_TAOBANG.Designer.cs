@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DACS2.Data.Migrations
 {
     [DbContext(typeof(DACS2DbContext))]
-    [Migration("20221111072652_themcot1")]
-    partial class themcot1
+    [Migration("20221112070838_TAOBANG")]
+    partial class TAOBANG
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -143,49 +143,6 @@ namespace DACS2.Data.Migrations
                     b.ToTable("Color");
                 });
 
-            modelBuilder.Entity("DACS2.Data.Entities.Designs", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("CreateAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("CreateBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("DeleteAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DesignsName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DetleteBy")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("DislayOrder")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdProduct")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdateAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdProduct");
-
-                    b.ToTable("Designs");
-                });
-
             modelBuilder.Entity("DACS2.Data.Entities.Image", b =>
                 {
                     b.Property<int>("Id")
@@ -283,10 +240,10 @@ namespace DACS2.Data.Migrations
             modelBuilder.Entity("DACS2.Data.Entities.InvoiceDetails", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("IdInvoice")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("Amount")
                         .HasColumnType("int");
@@ -295,9 +252,8 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Designs")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IdInvoice")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Money")
                         .HasColumnType("decimal(18,2)");
@@ -310,7 +266,7 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id", "IdInvoice");
+                    b.HasKey("Id");
 
                     b.HasIndex("IdInvoice");
 
@@ -1412,25 +1368,25 @@ namespace DACS2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2022, 11, 11, 14, 26, 51, 744, DateTimeKind.Local).AddTicks(8569),
+                            CreateAt = new DateTime(2022, 11, 12, 14, 8, 38, 643, DateTimeKind.Local).AddTicks(4921),
                             StatusName = "Đang chờ xử lý"
                         },
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2022, 11, 11, 14, 26, 51, 744, DateTimeKind.Local).AddTicks(8569),
+                            CreateAt = new DateTime(2022, 11, 12, 14, 8, 38, 643, DateTimeKind.Local).AddTicks(4921),
                             StatusName = "Đang lấy hàng"
                         },
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2022, 11, 11, 14, 26, 51, 744, DateTimeKind.Local).AddTicks(8569),
+                            CreateAt = new DateTime(2022, 11, 12, 14, 8, 38, 643, DateTimeKind.Local).AddTicks(4921),
                             StatusName = "Đang giao hàng"
                         },
                         new
                         {
                             Id = 4,
-                            CreateAt = new DateTime(2022, 11, 11, 14, 26, 51, 744, DateTimeKind.Local).AddTicks(8569),
+                            CreateAt = new DateTime(2022, 11, 12, 14, 8, 38, 643, DateTimeKind.Local).AddTicks(4921),
                             StatusName = "Giao hàng thành công"
                         });
                 });
@@ -1630,17 +1586,6 @@ namespace DACS2.Data.Migrations
                     b.Navigation("product");
                 });
 
-            modelBuilder.Entity("DACS2.Data.Entities.Designs", b =>
-                {
-                    b.HasOne("DACS2.Data.Entities.Product", "product")
-                        .WithMany("designs")
-                        .HasForeignKey("IdProduct")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("product");
-                });
-
             modelBuilder.Entity("DACS2.Data.Entities.Image", b =>
                 {
                     b.HasOne("DACS2.Data.Entities.Product", "Product")
@@ -1768,8 +1713,6 @@ namespace DACS2.Data.Migrations
             modelBuilder.Entity("DACS2.Data.Entities.Product", b =>
                 {
                     b.Navigation("colors");
-
-                    b.Navigation("designs");
 
                     b.Navigation("images");
 

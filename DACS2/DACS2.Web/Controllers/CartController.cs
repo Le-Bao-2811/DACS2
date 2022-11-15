@@ -29,8 +29,12 @@ namespace DACS2.Web.Controllers
                         Id = p.Id,
                         pathImgP=p.pathImgP,
                         Price = p.Price,
-                        ProductName = p.ProductName
+                        ProductName = p.ProductName,                        
                     });
+                    var color = await _repo.FindAsync<Color>(product.Id);
+                    var size = await _repo.FindAsync<Size>(product.Id);
+                    product.color=color.ColorName;
+                    product.size=size.SizeName;
                     data.Add(product);
                 }
                 return Ok(data);
@@ -41,7 +45,7 @@ namespace DACS2.Web.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Shopping(ShoppingVM model)
+        public async Task<IActionResult> Shopping(ShoppingVM model)
         {
             if(model != null)
             {
@@ -49,13 +53,36 @@ namespace DACS2.Web.Controllers
                 invoice.NameCustomer = model.Name;
                 invoice.Address = model.Location;
                 invoice.NumberPhone=model.NumberPhone;
+                invoice.TotalMoney = 0;
                 var cookieList = Request.Cookies.Where(x => x.Key.Contains("products"))
                 .ToList();
+                List<InvoiceDetails> data = new List<InvoiceDetails>();
                 foreach(var item in cookieList)
                 {
+                    InvoiceDetails dataItem = new InvoiceDetails();
                     int currentID = Convert.ToInt32(item.Key.Replace("products_", ""));
-                    var value=item.Value;
+                    //get tên sản phẩm
+                    var product=await _repo.FindAsync<Product>(currentID);
+                    dataItem.ProductName = product.ProductName;
+                    dataItem.Money = product.Price;
+                    var value=item.Value.Split("-");
+                    dataItem.Amount = Convert.ToInt32(value[0]);
+                    // tính tổng hóa đơn
+                    dataItem.Size = value[1];
+                    var color = await _repo.FindAsync<Color>(Convert.ToInt32(value[2]));
+                    dataItem.Color=color.ColorName;
+                    data.Add(dataItem);
+                    //trừ sản phẩm 
+                    product.Amount -=dataItem.Amount;
+                    await _repo.UpdateAsync<Product>(product);
                 }
+                invoice.TotalMoney = model.totalMoney;
+                invoice.useVoucher = model.useVoucher;
+                invoice.InvoiceDetails = data;
+                invoice.StatusId = 1;
+                await _repo.AddAsync<Invoice>(invoice);
+                TempData["Messenger"] = "Đặt hàng thành công";
+                return RedirectToAction("Index","Home");
             }    
             return Ok();
         }

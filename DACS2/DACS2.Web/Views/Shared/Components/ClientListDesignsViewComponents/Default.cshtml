@@ -1,8 +1,0 @@
-﻿@model IEnumerable<DACS2.Data.Entities.Designs>
-@foreach (var item in Model)
-{
-    <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" value="@item.DesignsName" id="designs-@item.Id" name="designs">
-        <label class="custom-control-label" for="designs-@item.Id">@item.DesignsName</label>
-    </div>
-}

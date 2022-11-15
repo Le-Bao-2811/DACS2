@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DACS2.Web</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -74,6 +75,12 @@
                 </div>
             </div>
         </div>
+        @if (TempData["Messenger"] != null)
+        {
+            <div class="alert alert-success">
+                <strong>Thành công! @TempData["Messenger"]</strong>
+            </div>
+        }
         <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
             <div class="col-lg-4">
                 <a href="" class="text-decoration-none">
@@ -82,9 +89,9 @@
                 </a>
             </div>
             <div class="col-lg-4 col-6 text-left">
-                <form action="">
+                <form asp-action="AllProduct" asp-controller="Home">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
+                        <input name="search" type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
                         <div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>
@@ -145,8 +152,8 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="shop.html" class="nav-item nav-link">Shop</a>
+                            <a asp-action="Index" asp-controller="Home" class="nav-item nav-link active">Home</a>
+                            <a asp-action="AllProduct" asp-controller="Home" class="nav-item nav-link">Shop</a>
                             <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -160,14 +167,9 @@
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
-                            <a href="" class="btn px-0">
-                                <i class="fas fa-heart text-primary"></i>
-                                <span class="badge text-secondary border border-secondary rounded-circle"
-                                      style="padding-bottom: 2px;">0</span>
-                            </a>
-                            <a href="" class="btn px-0 ml-3">
-                                <i class="fas fa-shopping-cart text-primary"></i>
-                                <span class="badge text-secondary border border-secondary rounded-circle"
+                            <a asp-action="Shopping" asp-controller="Cart" class="btn px-0 ml-3">
+                                <i class="fas fa-shopping-cart text-primary" style="font-size:35px"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle js-count"
                                       style="padding-bottom: 2px;">0</span>
                             </a>
                         </div>
@@ -176,6 +178,7 @@
             </div>
         </div>
     </div>
+
     @RenderBody()
 
 
@@ -308,5 +311,6 @@
     <script src="~/ClientTLE/main.js"></script>
     <script src="~/awesome-notifications/index.var.js"></script>
     <script src="~/ClientTLE/Cart.js" asp-append-version="true"></script>
+    @RenderSection("clientjs", false)
 </body>
 </html>

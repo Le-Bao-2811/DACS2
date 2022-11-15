@@ -16,7 +16,6 @@ namespace DACS2.Data.Entities
         {
             colors=new HashSet<Color>();
             sizes=new HashSet<Size>();
-            designs = new HashSet<Designs>();
             images=new HashSet<Image>();
         }
         
@@ -33,7 +32,6 @@ namespace DACS2.Data.Entities
         public int IdSuplier { get; set; }
         public Supplier supplier { get; set; }
         public CategoryProduct categoryProduct { get; set; }
-        public ICollection<Designs> designs { get; set; }
         public ICollection<Size> sizes { get; set; }
         public ICollection<Color> colors { get; set; }
         public ICollection<Image> images { get; set; }
