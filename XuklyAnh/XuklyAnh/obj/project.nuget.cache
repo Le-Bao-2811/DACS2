@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "UL/LPtaSAxeGIsaznHRcGSfpQ5Pd6Y/D/T+arVG3yfc80lZgJ74DbAR8V2qmfGDw0TgkTrWYv7Gee+zMr/2z+Q==",
+  "success": true,
+  "projectFilePath": "D:\\DACS2\\BE\\DACS2\\XuklyAnh\\XuklyAnh\\XuklyAnh.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\notus-image-watermarker\\1.0.4\\notus-image-watermarker.1.0.4.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

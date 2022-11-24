@@ -123,7 +123,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Icon = "fa-box",
                             Permission = AuthConst.Policy.VIEW_LIST
                         },
-                
+                 
 				//new MenuItem
 				//{
 				//	DisplayText = "Menu 2 cấp",

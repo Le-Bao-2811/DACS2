@@ -3,6 +3,7 @@ using DACS2.Data.Reponsitory;
 using DACS2.Web.ViewModels.Cart;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.CompilerServices;
+using System.Security.Claims;
 
 namespace DACS2.Web.Controllers
 {
@@ -80,6 +81,7 @@ namespace DACS2.Web.Controllers
                 invoice.useVoucher = model.useVoucher;
                 invoice.InvoiceDetails = data;
                 invoice.StatusId = 1;
+                invoice.CreateBy=Convert.ToInt32(ClaimTypes.NameIdentifier);
                 await _repo.AddAsync<Invoice>(invoice);
                 TempData["Messenger"] = "Đặt hàng thành công";
                 return RedirectToAction("Index","Home");

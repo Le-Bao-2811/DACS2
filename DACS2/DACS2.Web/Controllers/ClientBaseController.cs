@@ -30,7 +30,7 @@ namespace DACS2.Web.Controllers
             }
         }
 
-        protected void SetSuccessMesg(string mesg) => TempData["Success"] = mesg;
+        protected void SetSuccessMesg(string mesg) => TempData["Messenger"] = mesg;
         protected HashResult HashHMACSHA512(string pwd)
         {
             var hashResult = new HashResult();

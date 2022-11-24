@@ -16,9 +16,9 @@ namespace DACS2.Web.Areas.Admin.ViewModel.Role
         [AppRequired(ErrorMessage = VM.RoleVM.PERMISSION_IDS_REQUIRED_ERR_MESG)]
         [AppRegex(VM.RoleVM.PERMISSION_IDS_REGEX, ErrorMessage = VM.RoleVM.PERMISSION_IDS_REGEX_ERR_MESG)]
         public string PermissionIds { get; set; }
-        public string DeletedPermissionIds { get; set; }
+        public string? DeletedPermissionIds { get; set; }
 
         // Chuỗi chứa permissionId được thêm mới, phân tách bởi dấu phẩy
-        public string AddedPermissionIds { get; set; }
+        public string? AddedPermissionIds { get; set; }
     }
 }

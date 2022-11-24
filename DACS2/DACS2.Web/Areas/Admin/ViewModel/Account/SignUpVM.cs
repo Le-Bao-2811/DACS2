@@ -1,4 +1,5 @@
 ﻿using DACS2.Share.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace DACS2.Web.Areas.Admin.ViewModel.Account
 {
@@ -8,6 +9,7 @@ namespace DACS2.Web.Areas.Admin.ViewModel.Account
         public string UserName { get; set; }
         [AppRequired]
         public string Password { get; set; }
+        [Compare(nameof(Password), ErrorMessage = "Mật khẩu không khớp")]
         public string ComformPassword { get; set; }
         [AppRequired]
         public string Gmail { get; set; }

@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using DACS2.Data.Entities;
 using DACS2.Data.Reponsitory;
+using DACS2.Share.Consts;
 using DACS2.Share.Extensions;
 using DACS2.Web.Areas.Admin.ViewModel.Account;
+using DACS2.Web.Common;
 using DACS2.Web.WebConfig;
 using DACS2.Web.WebConfig.Const;
 using Microsoft.AspNetCore.Authentication;
@@ -13,6 +15,7 @@ using X.PagedList;
 
 namespace DACS2.Web.Areas.Admin.Controllers
 {
+    
     public class AccountController : BaseController
     {
         public readonly IMapper _mapper;
@@ -20,6 +23,7 @@ namespace DACS2.Web.Areas.Admin.Controllers
         {
             _mapper = mapper;
         }
+        [AppAuthorize(AuthConst.User.VIEW_LIST)]
         public IActionResult Index(int page = 1, int size = 10)
         {
             var data = _repo.GetAll<User, ListUserVM>(MapperConfig.UserIndexConf)
@@ -128,6 +132,11 @@ namespace DACS2.Web.Areas.Admin.Controllers
             //    return HomePage();
             //}
             return RedirectToAction(nameof(Index), "Account");
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(AppConst.COOKIES_AUTH);
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
     }
 }
