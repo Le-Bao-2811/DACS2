@@ -1,0 +1,28 @@
+﻿@model DACS2.Web.Areas.Admin.ViewModel.Report.DetailsReportVM
+
+<div>
+    <h4>DetailsReportVM</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.NumberPhone)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.NumberPhone)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ReportContent)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.ReportContent)
+        </dd>
+        
+    </dl>
+</div>
+

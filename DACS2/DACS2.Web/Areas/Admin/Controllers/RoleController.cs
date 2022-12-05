@@ -22,9 +22,9 @@ namespace DACS2.Web.Areas.Admin.Controllers
         {
         }
         [AppAuthorize(AuthConst.Role.VIEW_LIST)]
-        public IActionResult Index(int page=1,int size=10)
+        public IActionResult Index(int page = 1, int size = 10)
         {
-            var data =  _repo.GetAll<Role, ListRoleItemVM>(MapperConfig.RoleIndexConf).ToPagedList(page,size);
+            var data = _repo.GetAll<Role, ListRoleItemVM>(MapperConfig.RoleIndexConf).ToPagedList(page, size);
             return View(data);
         }
         [AppAuthorize(AuthConst.Role.CREATE)]
@@ -150,12 +150,58 @@ namespace DACS2.Web.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
         [AppAuthorize(AuthConst.Role.DELETE)]
+        public async Task<IActionResult> Delete(int? id)
+        {
+
+            if (!id.HasValue)
+            {
+                SetErrorMesg("Không tìm thấy quyền");
+                return RedirectToAction(nameof(Index), "Role");
+            }
+
+            var data = await _repo.FindAsync<Role, RoleDeleteVM>(id.Value, MapperConfig.RoleDeleteConf);
+
+            if (data == null)
+            {
+                SetErrorMesg("Không tìm thấy quyền");
+                return RedirectToAction(nameof(Index), "Role");
+            }
+            if (data.CanDelete == false)
+            {
+                SetErrorMesg($"Không thể xóa vai trò [{data.RoleName}]");
+                return RedirectToAction(nameof(Index), "Role");
+            }
+            // Xóa không cần xác nhận nếu không có dữ liệu user liên quan
+            if (data.AppUsers == null || data.AppUsers.Count == 0)
+            {
+                await _repo.DeleteAsync<Role>(data.Id);
+                SetSuccessMesg($"Xóa vai trò [{data.RoleName}] thành công");
+                return RedirectToAction(nameof(Index), "Role");
+            }
+
+            var userDeletedCount = data.AppUsers.Where(u => u.DeletedDate != null).Count();
+            if (userDeletedCount == data.AppUsers.Count)
+            {
+                await _repo.DeleteAsync<Role>(data.Id);
+                var users = await _repo.GetAll<User>(where: u => u.IdRole == data.Id).ToListAsync();
+                // Cập nhật vai trò mới
+                users.ForEach(u => u.IdRole = null);
+                await _repo.UpdateAsync(users);
+                SetSuccessMesg($"Xóa vai trò [{data.RoleName}] thành công");
+                return RedirectToAction(nameof(Index), "Role");
+            }
+            // Chỉ hiển thị user chưa bị xóa
+            data.AppUsers = data.AppUsers.Where(u => u.DeletedDate == null).ToList();
+            return View(data);
+        }
+        [AppAuthorize(AuthConst.Role.DELETE)]
+        [HttpPost]
         public async Task<IActionResult> Delete(RoleDeleteVM data)
         {
             if (!ModelState.IsValid)
             {
                 SetErrorMesg("Đã xảy ra lỗi", true);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), "Role");
             }
 
             try
@@ -172,15 +218,15 @@ namespace DACS2.Web.Areas.Admin.Controllers
                 await _repo.DeleteAsync<User>(data.Id);
                 await _repo.CommitTransactionAsync();
 
-                SetSuccessMesg($"Xóa vai trò [{data.Name}] thành công");
-                return RedirectToAction(nameof(Index));
+                SetSuccessMesg($"Xóa vai trò [{data.RoleName}] thành công");
+                return RedirectToAction(nameof(Index), "Role");
             }
             catch (Exception ex)
             {
                 // Rollback
                 await _repo.RollbackTransactionAsync();
 
-                SetErrorMesg("Đã xảy ra lỗi");
+                SetErrorMesg("Đã xảy ra lỗi rồi ");
                 return RedirectToAction(nameof(Delete), new { id = data.Id });
             }
         }

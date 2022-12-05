@@ -1,0 +1,244 @@
+﻿@model IEnumerable<DACS2.Web.ViewModels.Cart.SelectCartByUserVM>
+
+    <link href="~/ClientTLE/CssLiscCartofUser/css/checkout.min.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/ClientTLE/CssLiscCartofUser/css/checkout.vender.min.css" rel="stylesheet" />
+    <link href="~/ClientTLE/CssLiscCartofUser/css/custom.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/fontawesome.css" rel="stylesheet" />
+    <style>
+        a,
+        .radio__label__icon,
+        .payment-due__price,
+        .spinner--active,
+        .icon-print,
+        .alert--info,
+        .order-summary-toggle__total-recap {
+            color: #000000;
+        }
+
+        .input-checkbox:checked,
+        .input-radio:checked {
+            -webkit-box-shadow: 0 0 0 10px #000000 inset;
+            box-shadow: 0 0 0 10px #000000 inset;
+        }
+
+        .product-thumbnail__quantity {
+            background-color: #000000;
+        }
+
+        a:hover,
+        a:focus,
+        .icon-print:hover {
+            color: #000000;
+        }
+
+        .field__input:focus,
+        .select2-selection:focus,
+        .select2-search__field:focus {
+            border-color: #000000;
+            box-shadow: 0 0 0 1px #000000;
+        }
+
+        .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+            background-color: #000000;
+        }         
+
+        .btn {
+            color: #FFFFFF;
+        }
+
+        .product-thumbnail__quantity {
+            color: #FFFFFF;
+        }
+        .test-custom{
+            font-size:20px;
+        }
+    </style>
+
+
+<body data-no-turbolink>
+    <header class="banner">
+        <div class="wrap">
+            <div class="logo logo--center">
+                <h1 class="shop__name">
+                    <a href="/">
+                        Evo Mobile
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </header>
+    @foreach (var item in Model)
+    {
+        <aside>
+            <button class="order-summary-toggle" data-toggle="#order-summary" data-toggle-class="order-summary--is-collapsed">
+                <span class="wrap">
+                    <span class="order-summary-toggle__inner">
+                        <span class="order-summary-toggle__text expandable">
+                            Đơn hàng
+                        </span>
+                        <span class="order-summary-toggle__total-recap" data-bind="getTextTotalPrice()"></span>
+                    </span>
+                </span>
+            </button>
+        </aside>
+        <div class="content">
+            <form data-tg-refresh="checkout" id="checkoutForm" method="post" asp-action="">
+                <input type="hidden" name="_method" value="patch" />
+                <div class="wrap">
+                    <main class="main">
+                        <header class="main__header">
+                            <div class="logo logo--center">
+                                <h1 class="shop__name">
+                                    <a href="/">
+                                        Đơn hàng
+                                    </a>
+                                </h1>
+                            </div>
+                        </header>
+                        <div class="main__content">
+                            <article class="animate-floating-labels row">
+                                <div class="col col--two">
+                                    <section class="section">
+
+                                        <div class="section__content">
+                                            <div class="fieldset">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="field__input-wrapper">
+                                                            <label for="email" class="field__label test-custom">
+                                                                Tên khách hàng
+                                                            </label>
+                                                            <b class="test-custom">@item.NameCustomer</b>
+                                                        </div>
+                                                        <div class="field__input-wrapper">
+                                                            <label for="email" class="field__label test-custom">
+                                                                Địa chỉ
+                                                            </label>
+                                                            <b class="test-custom">@item.Address</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field__input-wrapper">
+                                                            <label for="email" class="field__label test-custom">
+                                                                Số điện thoại
+                                                            </label>
+                                                            <b test-custom>@item.NumberPhone</b>
+                                                        </div>
+                                                        <div class="field__input-wrapper">
+                                                            <label for="email" class="field__label test-custom">
+                                                                Tổng số tiền
+                                                            </label>
+                                                            <b class="test-custom">@item.TotalMoney.ToString("#,0##") VNĐ</b>
+                                                        </div>
+                                                        <div class="field__input-wrapper">
+                                                            <label for="email" class="field__label test-custom">
+                                                                Tình trạng
+                                                            </label>
+                                                            <b class="test-custom">@item.Statuscart</b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field field--show-floating-label field--disabled">
+                                                   
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                </div>
+                            </article>
+                            <div class="field__input-btn-wrapper field__input-btn-wrapper--vertical hide-on-desktop">
+                                <button type="submit" class="btn btn-checkout spinner" data-bind-class="{'spinner--active': isSubmitingCheckout}" data-bind-disabled="isSubmitingCheckout || isLoadingReductionCode">
+                                    <span class="spinner-label">ĐẶT HÀNG</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="spinner-loader">
+                                        <use href="#spinner"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="common-alert" data-tg-refresh="refreshError">
+                                <div class="alert alert--danger hide-on-desktop">
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <aside class="sidebar">
+                        <div class="sidebar__header">
+                            <h2 class="sidebar__title">
+                                Đơn hàng (@item.InvoiceDetails.Count sản phẩm)
+                            </h2>
+                        </div>
+                        <div class="sidebar__content">
+                            <div id="order-summary" class="order-summary order-summary--is-collapsed">
+                                <div class="order-summary__sections">
+                                    <div class="order-summary__section order-summary__section--product-list order-summary__section--is-scrollable order-summary--collapse-element">
+                                        <table class="product-table">
+                                            <caption class="visually-hidden">Chi tiết đơn hàng</caption>
+                                            <thead class="product-table__header">
+                                                <tr>
+                                                    <th>
+                                                        <span class="visually-hidden">Ảnh sản phẩm</span>
+                                                    </th>
+                                                    <th>
+                                                        <span class="visually-hidden">Mô tả</span>
+                                                    </th>
+                                                    <th>
+                                                        <span class="visually-hidden">Sổ lượng</span>
+                                                    </th>
+                                                    <th>
+                                                        <span class="visually-hidden">Đơn giá</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var cart in item.InvoiceDetails)
+                                                {
+                                                    <tr class="product">
+                                                        <td class="product__image">
+                                                            <div class="product-thumbnail">
+                                                                <div class="product-thumbnail__wrapper" data-tg-static>
+                                                                    <img src="/img/products/@cart.pathImg" alt="" class="product-thumbnail__image">
+                                                                </div>
+                                                                <span class="product-thumbnail__quantity">@cart.Amount</span>
+                                                            </div>
+                                                        </td>
+                                                        <th class="product__description">
+                                                            <span class="product__description__name">
+                                                                @cart.ProductName
+                                                            </span>
+                                                        </th>
+                                                        <td class="product__quantity visually-hidden"><em>Số lượng:</em>@cart.Amount</td>
+                                                        <td class="product__price">@cart.Money.ToString("#,0##") VNĐ</td>
+                                                    </tr>
+                                                }
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </form>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="spinner">
+                    <svg viewBox="0 0 30 30">
+                        <circle stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                stroke-dasharray="85%" cx="50%" cy="50%" r="40%">
+                            <animateTransform attributeName="transform" type="rotate" from="0 15 15" to="360 15 15"
+                                              dur="0.7s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </symbol>
+            </svg>
+        </div>
+    }
+</body>
+@section clientjs{
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/ClientTLE/CssLiscCartofUser/js/Giaodien.js" asp-append-version="true"></script>
+
+}

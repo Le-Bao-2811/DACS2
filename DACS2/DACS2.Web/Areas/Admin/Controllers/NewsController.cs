@@ -64,7 +64,8 @@ namespace DACS2.Web.Areas.Admin.Controllers
                     string image = UploadImgAndReturnPath(model.Image, "/img/news/");
                     image = image.Split('/').Last();
                     data.pathImg=image;
-                }              
+                }
+                
                 await _repo.AddAsync(data);
                 return RedirectToAction("Index");
             }
@@ -101,6 +102,9 @@ namespace DACS2.Web.Areas.Admin.Controllers
                     model.pathImg = image;
                 }
                 _mapper.Map<AddorUpdateNewsVM,News>(model,data);
+                var split = data.Content.Split("<p>");
+                split = split[1].Split("</p>");
+                data.Content = split[0];
                 await _repo.UpdateAsync<News>(data);
                 SetSuccessMesg("Sửa tin tức thành công");
                 return RedirectToAction("Index");

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<DACS2.Data.Entities.Image>
+<div class="row">
+    <div class="col-md-12">
+        @foreach (var item in Model)
+        {
+            <div class="p-2 float-left">
+                <a class="btn btn-danger deleteimage" data-id="@item.Id">Xóa ảnh</a><br />
+                <img style="width:150px;height:80px" src="~/img/products/@item.pathImage" />
+            </div>
+
+        }
+    </div>
+    <div>
+        
+    </div>
+</div>
+

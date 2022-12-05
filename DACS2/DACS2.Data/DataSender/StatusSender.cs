@@ -38,6 +38,11 @@ namespace DACS2.Data.DataSender
                     Id=4,
                     StatusName="Giao hàng thành công",
                     CreateAt=now
+                },new Status
+                {
+                    Id=5,
+                    StatusName="Giao hàng không thành công",
+                    CreateAt=now
                 }
             );
         }

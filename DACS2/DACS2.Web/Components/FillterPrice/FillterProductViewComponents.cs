@@ -47,7 +47,7 @@ namespace DACS2.Web.Components.FillterPrice
                 {
                     Id = 5,
                     Name = "price",
-                    To=500000,
+                    To=1000000,
                     From=0,
                 },
             });

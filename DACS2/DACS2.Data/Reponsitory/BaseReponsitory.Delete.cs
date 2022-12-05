@@ -21,12 +21,8 @@ namespace DACS2.Data.Reponsitory
         public virtual async Task DeleteAsync<TEntity>(int id) where TEntity : BaseEntity
         {
             var tableName = GetTableName<TEntity>();
-            int? updateUserId = null;
-            if (_httpContext != null)
-            {
-                updateUserId = CurrentUserId();
-            }
-            var query = $"UPDATE FROM {tableName} SET DeletedDate = GETDATE(), UpdatedBy = {updateUserId} WHERE Id = {id}";
+            var now = DateTime.Now;
+            var query = $"UPDATE {tableName} SET DeleteAt = GETDATE() WHERE Id = {id}";
             LogDebugQuery(query);
             await _db.Database.ExecuteSqlRawAsync(query);
         }

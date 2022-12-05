@@ -1,17 +1,22 @@
 ﻿using AutoMapper;
 using DACS2.Data.Entities;
 using DACS2.Web.Areas.Admin.ViewModel.Account;
+using DACS2.Web.Areas.Admin.ViewModel.Cart;
 using DACS2.Web.Areas.Admin.ViewModel.CategoryProduct;
 using DACS2.Web.Areas.Admin.ViewModel.News;
 using DACS2.Web.Areas.Admin.ViewModel.NewsCategory;
 using DACS2.Web.Areas.Admin.ViewModel.Policy;
 using DACS2.Web.Areas.Admin.ViewModel.Product;
+using DACS2.Web.Areas.Admin.ViewModel.Report;
 using DACS2.Web.Areas.Admin.ViewModel.Role;
 using DACS2.Web.Areas.Admin.ViewModel.Supplier;
 using DACS2.Web.Areas.Admin.ViewModel.Voucher;
 using DACS2.Web.ViewModels;
 using DACS2.Web.ViewModels.Auth;
+using DACS2.Web.ViewModels.Cart;
 using DACS2.Web.ViewModels.Client;
+using DACS2.Web.ViewModels.News;
+using DACS2.Web.ViewModels.Report;
 
 namespace DACS2.Web.WebConfig
 {
@@ -28,6 +33,10 @@ namespace DACS2.Web.WebConfig
             CreateMap<Policy,AddorUpdatePolicyVM>().ReverseMap();
             CreateMap<Product,AddProductVM>().ReverseMap();            
             CreateMap<User,ClientSignUpVM>().ReverseMap();            
+            CreateMap<Report,AddReportVM>().ReverseMap();            
+            CreateMap<Invoice,DetailCartVM>().ReverseMap();            
+            CreateMap<Product,DetailsProductVM>().ReverseMap();            
+            CreateMap<Color, UpdateAmount>().ReverseMap();            
                         
         }
         public static MapperConfiguration RoleIndexConf = new(mapper =>
@@ -96,6 +105,43 @@ namespace DACS2.Web.WebConfig
         {
             // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
             mapper.CreateMap<Product, ClientListAllProducts>();
+        });
+        public static MapperConfiguration ReportIndexConf = new(mapper =>
+        {
+            // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
+            mapper.CreateMap<Report, ListReportVM>();
+        });
+        public static MapperConfiguration ListCartByUserIndexConf = new(mapper =>
+        {
+            // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
+            mapper.CreateMap<Invoice, SelectCartByUserVM>()
+            .ForMember(uItem => uItem.Statuscart, opt => opt.MapFrom(uS => uS.status.StatusName));
+        });
+        public static MapperConfiguration SelectCartIndexConf = new(mapper =>
+        {
+            // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
+            mapper.CreateMap<Invoice, SelectCartVM>()
+                        .ForMember(uItem => uItem.Statuscart, opt => opt.MapFrom(uS => uS.status.StatusName));
+            ;
+        });
+        public static MapperConfiguration UpdateAmountIndexConf = new(mapper =>
+        {
+            // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
+            mapper.CreateMap<Color, UpdateAmount>();
+            ;
+        });
+        public static MapperConfiguration ListClientNewsIndexConf = new(mapper =>
+        {
+            // Map dữ liệu từ kiểu AppRole sang RoleListItemVM
+            mapper.CreateMap<News, ListNewsClientVM>();
+            ;
+        });
+        public static MapperConfiguration RoleDeleteConf = new(mapper =>
+        {
+            // Map dữ liệu thuộc tính con
+            mapper.CreateMap<User, RoleDeleteVM_User>();
+            // Map dữ liệu thuộc tính cha
+            mapper.CreateMap<Role, RoleDeleteVM>();
         });
     }
 }

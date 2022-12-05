@@ -13,8 +13,8 @@ namespace DACS2.Web.Areas.Admin.ViewModel.Role
 
         [AppRequired(ErrorMessage = VM.RoleVM.NEWID_REQUIRED_ERR_MESG)]
         public int NewId { get; set; }
-        public string Name { get; set; }
-        public string Desc { get; set; }
+        public string RoleName { get; set; }
+        public string Description { get; set; }
         public bool? CanDelete { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }

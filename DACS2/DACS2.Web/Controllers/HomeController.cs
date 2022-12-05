@@ -60,6 +60,31 @@ namespace DACS2.Web.Controllers
                 return View(data);
             }
         }
+        public async Task<IActionResult> GetProductByCategory(int id, string fillter = "")
+        {
+            if (fillter != "")
+            {
+                var arrayfillter = fillter.Split("-");
+                var to = Convert.ToInt32(arrayfillter[0]);
+                var from = Convert.ToInt32(arrayfillter[1]);
+                if (from == 0)
+                {
+                    var data = await _repo.GetAll<Product, ClientListAllProducts>(MapperConfig.ClientListProductsIndexConf).Where(s => s.Price > to).Where(x => x.IdProductCategory == id).ToPagedListAsync(1, 20);
+                    return View(data);
+                }
+                else
+                {
+                    var data = await _repo.GetAll<Product, ClientListAllProducts>(MapperConfig.ClientListProductsIndexConf).Where(s => s.Price > to && s.Price < from).Where(x=>x.IdProductCategory==id).ToPagedListAsync(1, 20);
+                    return View(data);
+                }
+
+            }
+            else
+            {
+                var data = await _repo.GetAll<Product, ClientListAllProducts>(MapperConfig.ClientListProductsIndexConf).Where(x=>x.IdProductCategory==id).ToPagedListAsync(1, 20);
+                return View(data);
+            }
+        }
 
         public async Task<IActionResult> DeltailsProducts(int id)
         {
@@ -75,6 +100,11 @@ namespace DACS2.Web.Controllers
                 Sold = p.Sold,
                 Suppler = p.supplier.SupplierName,
             });
+            return View(data);
+        }
+        public async Task<IActionResult> DetailPolicy(int id)
+        {
+            var data=await _repo.FindAsync<Policy>(id);
             return View(data);
         }
     }

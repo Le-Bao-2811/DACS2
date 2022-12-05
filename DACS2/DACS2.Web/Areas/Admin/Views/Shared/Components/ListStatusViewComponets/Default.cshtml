@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DACS2.Data.Entities.Status>
+
+@foreach (var item in Model)
+{
+    if (ViewBag.selected != null)
+    {
+        if (ViewBag.selected == item.Id)
+        {
+            <option value="@item.Id" selected>@item.StatusName</option>
+        }
+        else
+        {
+            <option value="@item.Id">@item.StatusName</option>
+        }
+    }
+    else
+    {
+        <option value="@item.Id">@item.StatusName</option>
+    }
+}

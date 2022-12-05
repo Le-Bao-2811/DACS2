@@ -106,7 +106,7 @@ namespace DACS2.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("Amount")
+                    b.Property<int>("Amount")
                         .HasColumnType("int");
 
                     b.Property<string>("ColorName")
@@ -264,6 +264,10 @@ namespace DACS2.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Size")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("pathImg")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -1184,6 +1188,10 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("NumberPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ReportContent")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1360,26 +1368,32 @@ namespace DACS2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2022, 11, 15, 13, 24, 41, 677, DateTimeKind.Local).AddTicks(1265),
+                            CreateAt = new DateTime(2022, 12, 5, 10, 15, 21, 259, DateTimeKind.Local).AddTicks(2381),
                             StatusName = "Đang chờ xử lý"
                         },
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2022, 11, 15, 13, 24, 41, 677, DateTimeKind.Local).AddTicks(1265),
+                            CreateAt = new DateTime(2022, 12, 5, 10, 15, 21, 259, DateTimeKind.Local).AddTicks(2381),
                             StatusName = "Đang lấy hàng"
                         },
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2022, 11, 15, 13, 24, 41, 677, DateTimeKind.Local).AddTicks(1265),
+                            CreateAt = new DateTime(2022, 12, 5, 10, 15, 21, 259, DateTimeKind.Local).AddTicks(2381),
                             StatusName = "Đang giao hàng"
                         },
                         new
                         {
                             Id = 4,
-                            CreateAt = new DateTime(2022, 11, 15, 13, 24, 41, 677, DateTimeKind.Local).AddTicks(1265),
+                            CreateAt = new DateTime(2022, 12, 5, 10, 15, 21, 259, DateTimeKind.Local).AddTicks(2381),
                             StatusName = "Giao hàng thành công"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreateAt = new DateTime(2022, 12, 5, 10, 15, 21, 259, DateTimeKind.Local).AddTicks(2381),
+                            StatusName = "Giao hàng không thành công"
                         });
                 });
 
@@ -1488,7 +1502,7 @@ namespace DACS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("IdRole")
+                    b.Property<int?>("IdRole")
                         .HasColumnType("int");
 
                     b.Property<byte[]>("PasswordHash")
@@ -1675,9 +1689,7 @@ namespace DACS2.Data.Migrations
                 {
                     b.HasOne("DACS2.Data.Entities.Role", "role")
                         .WithMany("Users")
-                        .HasForeignKey("IdRole")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdRole");
 
                     b.Navigation("role");
                 });

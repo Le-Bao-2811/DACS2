@@ -1,0 +1,73 @@
+﻿@model IEnumerable<DACS2.Web.Areas.Admin.ViewModel.Cart.SelectCartVM>
+
+@{
+    ViewData["Title"] = "Danh sách thể loại tin tức";
+}
+
+
+@if (User.IsInPermission(AuthConst.Invoice.VIEW_LIST))
+{
+    <div class="my-2">
+        <a class="btn btn-primary" asp-action="Index">
+            Danh sách đơn hàng chưa xác nhân
+        </a>
+   
+        <a class="btn btn-primary" asp-action="ListCartStatus2">
+            Danh sách đơn hàng chuẩn bị giao
+        </a>
+    
+        <a class="btn btn-primary" asp-action="ListCartStatus3">
+            Danh sách đơn hàng đang giao
+        </a>
+    
+        <a class="btn btn-primary" asp-action="ListCartStatus4">
+            Danh sách đơn hàng giao thành công
+        </a>
+    </div>
+
+}
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tên khách hàng</th>
+                <th>Địa chỉ</th>
+                <th>Số điện thoại</th>
+                <th>Giá trị đơn hàng</th>
+                <th>Tình trạng</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="fit">@item.Id</td>
+                    <td>@item.NameCustomer</td>
+                    <td>@item.Address</td>
+                    <td>@item.NumberPhone</td>
+                    <td>@item.TotalMoney</td>
+                    <td>@item.Statuscart</td>
+                    <td class="fit">
+                        @if (User.IsInPermission(AuthConst.CategoryNews.DELETE))
+                        {
+                            <a asp-action="Delete" asp-route-id="@item.Id"
+                               class="btn btn-outline-secondary btn-sm"><i class="fas fa-trash"></i></a>
+                        }
+                        @if (User.IsInPermission(AuthConst.CategoryNews.UPDATE))
+                        {
+
+                            <a class="btn btn-outline-secondary btn-sm" asp-action="DetailInvoice" asp-controller="Cart" asp-route-id="@item.Id">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                        }
+
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<partial name="_Pager" />

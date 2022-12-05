@@ -41,6 +41,10 @@
     {
       "library": "sweetalert@2.1.2",
       "destination": "wwwroot/lib/sweetalert/"
+    },
+    {
+      "library": "Swiper@8.4.5",
+      "destination": "wwwroot/lib/Swiper/"
     }
   ]
 }

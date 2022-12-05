@@ -29,9 +29,18 @@ namespace DACS2.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> _Create(AddorUpdateCategoryNewsVM model)
         {
-            var data = _mapper.Map<CategoryNews>(model);
-            await _repo.AddAsync(data);
-            SetSuccessMesg("Thêm thể loại tin tức thành công");
+            try
+            {
+                var data = _mapper.Map<CategoryNews>(model);
+                await _repo.AddAsync(data);
+                SetSuccessMesg("Thêm thể loại tin tức thành công");
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
             return Ok(true);
         }
         [AppAuthorize(AuthConst.CategoryNews.UPDATE)]

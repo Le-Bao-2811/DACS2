@@ -23,11 +23,19 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
             var navBar = new NavBarViewModel();
             navBar.Items.AddRange(new MenuItem[]
             {
+                 new MenuItem
+                        {
+                            Action = "Index",
+                            Controller = "Home",
+                            DisplayText = "Trang chủ",
+                            Icon = "fa-home",
+                            Permission = AuthConst.CategoryNews.VIEW_LIST
+                        },
 
                 new MenuItem
                 {
                     DisplayText = "Quản lý trang web",
-                    Icon = "fa-shopping-basket",
+                    Icon = "fa-tasks",
                     ChildrenItems = new MenuItem[]
                     {
                         new MenuItem
@@ -35,7 +43,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Action = "Index",
                             Controller = "Account",
                             DisplayText = "Danh sách tài khoản",
-                            Icon = "fa-box",
+                            Icon = "fa-user",
                             Permission = AuthConst.User.VIEW_LIST
                         },
                         new MenuItem
@@ -43,7 +51,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Action = "Index",
                             Controller = "Role",
                             DisplayText = "Quyền trên trang",
-                            Icon = "fa-th-large",
+                            Icon = "fa-user-tag",
                             Permission = AuthConst.Role.VIEW_LIST
                         },
 
@@ -52,7 +60,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                 new MenuItem
                 {
                     DisplayText = "Quản lý tin tức",
-                    Icon = "fa-shopping-basket",
+                    Icon = "fa-tasks",
                     ChildrenItems = new MenuItem[]
                     {
                         new MenuItem
@@ -60,7 +68,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Action = "Index",
                             Controller = "CategoryNews",
                             DisplayText = "Thể loại tin  tức",
-                            Icon = "fa-box",
+                            Icon = "fa-newspaper",
                             Permission = AuthConst.CategoryNews.VIEW_LIST
                         },
                          new MenuItem
@@ -68,7 +76,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Action = "Index",
                             Controller = "News",
                             DisplayText = "tin  tức",
-                            Icon = "fa-box",
+                            Icon = "fa-newspaper",
                             Permission = AuthConst.News.VIEW_LIST
                         },
 
@@ -77,7 +85,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                 new MenuItem
                 {
                     DisplayText = "Quản lý Sản phẩm",
-                    Icon = "fa-shopping-basket",
+                    Icon = "fa-tasks",
                     ChildrenItems = new MenuItem[]
                     {
                        new MenuItem
@@ -85,7 +93,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Action = "Index",
                             Controller = "Supplier",
                             DisplayText = "Nhà cung cấp",
-                            Icon = "fa-box",
+                            Icon = "fa-parachute-box",
                             Permission = AuthConst.Supplier.VIEW_LIST
                         },
                          new MenuItem
@@ -93,15 +101,15 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Action = "Index",
                             Controller = "CategoryProduct",
                             DisplayText = "Thể loại sản phẩm",
-                            Icon = "fa-box",
+                            Icon = "fa-product-hunt",
                             Permission = AuthConst.News.VIEW_LIST
                         },
                           new MenuItem
                         {
                             Action = "Index",
                             Controller = "Product",
-                            DisplayText = "Sản phầm",
-                            Icon = "fa-box",
+                            DisplayText = "Sản phẩm",
+                            Icon = "fa-tshirt",
                             Permission = AuthConst.News.VIEW_LIST
                         },
 
@@ -112,7 +120,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Action = "Index",
                             Controller = "Voucher",
                             DisplayText = "Mã giảm giá",
-                            Icon = "fa-box",
+                            Icon = "fa-receipt",
                             Permission = AuthConst.Voucher.VIEW_LIST
                 },
                 new MenuItem
@@ -120,9 +128,33 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Action = "Index",
                             Controller = "Policy",
                             DisplayText = "Chính sách",
-                            Icon = "fa-box",
+                            Icon = "fa-barcode",
                             Permission = AuthConst.Policy.VIEW_LIST
                         },
+                new MenuItem
+                {
+                            DisplayText = "Khách hàng",
+                            Icon = "fa-tasks",
+                            ChildrenItems = new MenuItem[]
+                            {
+                                new MenuItem
+                                {
+                                    Action = "Index",
+                                    Controller = "Report",
+                                    DisplayText = "Phản hồi",
+                                    Icon = "fa-flag-checkered",
+                                    Permission = AuthConst.Report.VIEW_LIST
+                                },
+                                new MenuItem
+                                {
+                                    Action = "Index",
+                                    Controller = "Cart",
+                                    DisplayText = "Giỏ hàng",
+                                    Icon = "fa-shopping-cart",
+                                    Permission = AuthConst.Invoice.VIEW_LIST
+                                },
+                            }
+                 },
                  
 				//new MenuItem
 				//{

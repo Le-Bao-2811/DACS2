@@ -1,7 +1,7 @@
 ﻿@model DACS2.Web.Areas.Admin.ViewModel.Product.AddProductVM
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Thêm sản phẩm";
 }
 
 <div class="row">
@@ -25,11 +25,7 @@
                         <input asp-for="Price" class="form-control" />
                         <span asp-validation-for="Price" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
-                        <label asp-for="Description" class="control-label"></label>
-                        <input asp-for="Description" class="form-control" />
-                        <span asp-validation-for="Description" class="text-danger"></span>
-                    </div>
+                    
                 </div>
                 <div class="col-md-2">
                     <div class="form-group">
@@ -81,9 +77,18 @@
                     </div>
                     <a class="btn btn-primary add-image">Thêm hình ảnh</a>
                 </div>
-            </div>                       
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <textarea asp-for="Description" class="form-control summernote" ></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-secondary" />
+                <input type="submit" value="Thêm sản phẩm" class="btn btn-secondary" />
             </div>
         </form>
     </div>
@@ -95,4 +100,12 @@
 
 @section scripts{ 
     <script src="~/adminLTE/dist/js/product/add-product.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
+            $(".summernote").summernote({
+                placeholder: "Write your content here",
+                height: 200,
+            });
+        });
+    </script>
 }

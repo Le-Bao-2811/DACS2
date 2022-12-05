@@ -14,6 +14,7 @@ namespace DACS2.Data.Entities
     public class Report :BaseEntity
     {
         public string FullName { get; set; }
+        public string NumberPhone { get; set; }
         public string ReportContent { get; set; }
         public bool Status{ get; set; }
     }

@@ -1,0 +1,62 @@
+﻿@model DACS2.Web.Areas.Admin.ViewModel.Cart.DetailCartVM
+
+@{
+    ViewData["Title"] = "DetailInvoice";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="DetailInvoice">
+            <div class="row">
+                <div class="col-md-6">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group" hidden>
+                        <label asp-for="Id" class="control-label"></label>
+                        <input asp-for="Id" class="form-control" />
+                        <span asp-validation-for="Id" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NameCustomer" class="control-label"></label>
+                        <input asp-for="NameCustomer" class="form-control" readonly />
+                        <span asp-validation-for="NameCustomer" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control"  />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NumberPhone" class="control-label"></label>
+                        <input asp-for="NumberPhone" class="form-control" readonly />
+                        <span asp-validation-for="NumberPhone" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="TotalMoney" class="control-label"></label>
+                        <input asp-for="TotalMoney" class="form-control" readonly />
+                        <span asp-validation-for="TotalMoney" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="StatusId" class="control-label"></label>
+                        <select class="form-control" asp-for="StatusId">
+                            <vc:list-status-view-componets selected="@Model.StatusId" />
+                        </select>
+                        <span asp-validation-for="StatusId" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+   
+</div>
+
+<div>
+    <a asp-action="Index">Trở về trang trước</a>
+</div>
+

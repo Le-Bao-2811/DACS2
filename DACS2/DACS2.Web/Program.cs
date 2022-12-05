@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DACS2.Data;
 using DACS2.Data.Reponsitory;
+using DACS2.Share.Consts;
 using DACS2.Web.WebConfig;
 using DACS2.Web.WebConfig.Const;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +22,7 @@ builder.Services.AddServiceRepositories();
 builder.Services.AddAuthentication(AppConst.COOKIES_AUTH)
                 .AddCookie(options =>
                 {
-                    options.LoginPath = AppConst.ADMIN_LOGIN_PATH;
+                    options.LoginPath = AppConst.LOGIN_PATH;
                     options.ExpireTimeSpan = TimeSpan.FromHours(AppConst.LOGIN_TIMEOUT);
                     options.Cookie.HttpOnly = true;
                 });
@@ -53,24 +54,25 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
     app.UseEndpoints(endpoints =>
     {
-        endpoints.MapAreaControllerRoute(
-                areaName: "Admin",
-                name: "adminLogin",
-                pattern: "/Admin/Login",
+        
+        
+        endpoints.MapControllerRoute(
+                name: "Client",
+                pattern: AppConst.LOGIN_PATH,
                 defaults: new
                 {
-                    controller = "Account",
+                    controller = "Auth",
                     action = "Login",
-                    area = "Admin"
+                    
                 });
         endpoints.MapAreaControllerRoute(
-        name: "Admin",
-        areaName: "Admin",
-        pattern: "Admin/{controller=Home}/{action=Index}/{id?}"
+            name: "Admin",
+            areaName: "Admin",
+            pattern: "Admin/{controller=Home}/{action=Index}/{id?}"
         );
         endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}"
+            name: "default",
+            pattern: "{controller=Home}/{action=Index}/{id?}"
         );
     });
 });

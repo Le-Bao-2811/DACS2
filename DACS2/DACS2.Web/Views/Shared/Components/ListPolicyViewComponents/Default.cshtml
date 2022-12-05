@@ -1,0 +1,7 @@
+﻿@model IEnumerable<DACS2.Data.Entities.Policy>
+
+@foreach (var item in Model)
+{
+    <a class="text-secondary mb-2" asp-action="DetailPolicy" asp-controller="Home" asp-route-id="@item.Id"><i class="fa fa-angle-right mr-2"></i>@item.PolicyName</a>
+}
+

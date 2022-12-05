@@ -14,7 +14,7 @@ namespace DACS2.Web.WebConfig.Const
 		public const string APP_NAME = "Base Template";
 
 		// Đường dẫn trang đăng nhập
-		public const string LOGIN_PATH = "/";
+		public const string LOGIN_PATH = "/Login";
 
 		// đường dẫn trang đăng nhập admin
 		public const string ADMIN_LOGIN_PATH = "/Admin/Login";

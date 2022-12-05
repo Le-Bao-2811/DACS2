@@ -1,0 +1,38 @@
+﻿@model DACS2.Data.Entities.Policy
+
+@{
+    ViewData["Title"] = "Xem chính sách";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section clientcss{
+    <style>
+        .clearfix {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+            .clearfix:after {
+                clear: both;
+                content: "";
+                display: block;
+                line-height: 0;
+                height: 1%;
+                visibility: hidden;
+            }
+
+        .frame2 {
+            background-position: 0 -517px;
+            height: 316px;
+            width: 924px;
+            margin: 0 auto 18px;
+            padding: 6px 7px 0;
+            text-align: center;
+        }
+    </style>
+}
+<div class="clearfix">
+    <h2 style="float:left;margin-right:500px">@Model.PolicyName</h2>
+</div>
+<div class="container">
+    @Html.Raw(Model.Content)
+</div>

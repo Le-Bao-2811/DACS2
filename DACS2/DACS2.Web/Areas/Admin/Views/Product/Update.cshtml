@@ -1,0 +1,102 @@
+﻿@model DACS2.Web.Areas.Admin.ViewModel.Product.DetailsProductVM
+
+@{
+    ViewData["Title"] = "Sửa sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <vc:list-image-admin-view-components selected="@Model.Id" />
+        <form asp-action="Update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="pathImgP" class="control-label"></label> <br />
+                        <img src="~/img/products/@Model.pathImgP" style="width:100px;height:50px" />
+                        <span asp-validation-for="pathImgP" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Image" class="control-label">Hình ảnh</label>
+                        <input asp-for="Image" class="form-control" />
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="pathImgP" class="control-label"></label>
+                        <input asp-for="pathImgP" class="form-control" hidden />
+                        <span asp-validation-for="pathImgP" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" hidden>
+                        <label asp-for="Id" class="control-label"></label>
+                        <input asp-for="Id" class="form-control id" />
+                        <span asp-validation-for="Id" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ProductName" class="control-label"></label>
+                        <input asp-for="ProductName" class="form-control" />
+                        <span asp-validation-for="ProductName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ImportPrice" class="control-label"></label>
+                        <input asp-for="ImportPrice" class="form-control" />
+                        <span asp-validation-for="ImportPrice" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Price" class="control-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Unit" class="control-label"></label>
+                        <input asp-for="Unit" class="form-control" />
+                        <span asp-validation-for="Unit" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdProductCategory" class="control-label"></label>
+                        <select asp-for="IdProductCategory" class="form-control">
+                            <vc:list-product-category-view-components selected="@Model.IdProductCategory" />
+                        </select>
+                        <span asp-validation-for="IdProductCategory" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdSuplier" class="control-label"></label>
+                        <select asp-for="IdSuplier" class="form-control">
+                            <vc:list-supplier-view-components selected="@Model.IdSuplier" />
+                        </select>
+                        <span asp-validation-for="IdSuplier" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label">Mô tả sản phẩm</label>
+                        <p>@Html.Raw(Model.Description)</p>
+                        <textarea class="form-control summernote" name="Description"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cập nhật" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script src="~/adminLTE/dist/js/product/detailproduct.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
+            $(".summernote").summernote({
+                placeholder: "Write your content here",
+                height: 200,
+            });
+        });
+    </script>
+}
+
+

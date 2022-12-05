@@ -1,0 +1,71 @@
+﻿@model IEnumerable<DACS2.Web.Areas.Admin.ViewModel.Product.UpdateAmount>
+
+@{
+    ViewData["Title"] = "Cập nhật số lượng";
+}
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ColorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+
+                <td>
+                    @if (User.IsInPermission(AuthConst.Product.UPDATE))
+                    {
+                        <a class="btn btn-outline-secondary btn-sm js-update"  data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#modal">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@*Modal add or update*@
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fal fa-times"></i></button>
+            </div>
+            <div class="modal-Update">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-bs-dismiss="modal" class="btn btn-secondary js-close">Thoát</button>
+                <button type="button" class="btn btn-primary js-postdata">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{ 
+    <script src="~/adminLTE/dist/js/product/updateAmoutnt.js" asp-append-version="true"></script>
+}

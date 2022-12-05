@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<DACS2.Web.Areas.Admin.ViewModel.News.ListNewsVM>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Danh sách tin tức";
 }
 
 @if (User.IsInPermission(AuthConst.News.CREATE))
 {
     <div class="my-2">
         <a  class="btn btn-primary" asp-action="Create" >
-            <i class="fas fa-plus-circle"></i> &nbsp; Thêm mới vai trò
+            <i class="fas fa-plus-circle"></i> &nbsp; Thêm tin tức
         </a>
     </div>
 }

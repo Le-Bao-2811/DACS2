@@ -17,7 +17,7 @@ namespace DACS2.Data.Entities
         public byte[] PasswordSalt { get; set; }
         public string Gmail { get; set; }
         public string SDT { get; set; }
-        public int IdRole { get; set; }
+        public int? IdRole { get; set; }
         public Role role { get; set; }
     }
 }

@@ -8,6 +8,7 @@
         public int Price { get; set; }
         public string slug { get; set; }
         public string? pathImgP { get; set; }
+        public int IdProductCategory { get; set; }
 
     }
 }

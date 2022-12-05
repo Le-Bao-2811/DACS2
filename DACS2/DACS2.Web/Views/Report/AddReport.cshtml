@@ -1,0 +1,50 @@
+﻿@model DACS2.Web.ViewModels.Report.AddReportVM
+
+@{
+    ViewData["Title"] = "AddReport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section clientcss{
+    <link href="~/lib/summernote/summernote.css" rel="stylesheet" />
+}
+<div class="container">
+    <h1>Phản ánh shop</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="AddReport">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FullName" class="control-label">Tên khách hàng</label>
+                    <input asp-for="FullName" class="form-control" />
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NumberPhone" class="control-label">Số điện thoại</label>
+                    <input asp-for="NumberPhone" class="form-control" />
+                    <span asp-validation-for="NumberPhone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ReportContent" class="control-label">Nội dung phản hồi</label>
+                    <textarea asp-for="ReportContent" class="summernote"></textarea>
+                    <span asp-validation-for="ReportContent" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Phản hồi" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section clientjs{
+    <script src="~/lib/summernote/summernote.js"></script>
+    <script>
+    $(document).ready(function () {
+            $(".summernote").summernote({
+                placeholder: "Write your content here",
+                height: 200,
+            });
+        });
+    </script>
+}
+
+

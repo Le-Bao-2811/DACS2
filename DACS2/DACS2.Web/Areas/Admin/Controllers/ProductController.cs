@@ -46,6 +46,12 @@ namespace DACS2.Web.Areas.Admin.Controllers
                 .ToPagedListAsync(page, size);
             return View(data);
         }
+        public async Task<IActionResult> IndexListAmout(int page = 1, int size = 10)
+        {
+            var data = await _repo.GetAll<Product, ListProductVM>(MapperConfig.ProductIndexConf).Where(x=>x.Amount<20)
+                .ToPagedListAsync(page, size);
+            return View(data);
+        }
         [AppAuthorize(AuthConst.Product.CREATE)]
         public IActionResult Create()
         {
@@ -119,19 +125,98 @@ namespace DACS2.Web.Areas.Admin.Controllers
 
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> Update(int id)
+        {
+            var product = await _repo.GetOneAsync<Product, DetailsProductVM>(id, p => new DetailsProductVM
+            {
+                Id = p.Id,
+                Description = p.Description,
+                ImportPrice = p.ImportPrice,
+                pathImgP = p.pathImgP,
+                Price = p.Price,
+                ProductName = p.ProductName,
+                Unit = p.Unit,
+                IdProductCategory=p.IdProductCategory,
+                IdSuplier=p.IdSuplier
+            });
+            return View(product);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(DetailsProductVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var data = await _repo.FindAsync<Product>(model.Id);
+                if (model.Description == null)
+                {
+                    model.Description=data.Description;
+                }
+                _mapper.Map<DetailsProductVM, Product>(model, data);
+                if (model.Image != null)
+                {
+                    string image = UploadImgAndReturnPath(model.Image, "/img/products/");
+                    image = image.Split('/').Last();
+                    data.pathImgP = image;
+                }
+                await _repo.UpdateAsync(data);
+                SetSuccessMesg("Cập nhật sản phẩm thành công");
+                return RedirectToAction("Index");
+            }
+            SetErrorMesg("Cập nhật sản phẩm thất bại");
+            return View(model);
+        }
         [AppAuthorize(AuthConst.Product.DELETE)]
         public async Task<IActionResult> Delete (int id)
         {
             try
             {
                 var data = await _repo.FindAsync<Product>(id);
+                var cate = await _repo.FindAsync<CategoryProduct>(data.IdProductCategory);
                 await _repo.DeleteAsync(data);
+                cate.SoLuong -= 1;
+                await _repo.UpdateAsync(cate);
                 SetSuccessMesg("Xóa sản phẩm thành công");
                 return RedirectToAction("Index");
             }catch (Exception ex)
             {
                 return Ok(false);
             }
+        }
+        public async Task<IActionResult> DeleteImage(int id)
+        {
+            var data=await _repo.FindAsync<Image>(id);
+            await _repo.DeleteAsync(data);
+            return Ok(true);
+        }
+        public async Task<IActionResult> UpdateAmout(int id)
+        {
+            var data = await _repo.GetAll<Color, UpdateAmount>(MapperConfig.UpdateAmountIndexConf).Where(x => x.IdProduct == id).ToListAsync();
+            return View(data);
+        }
+        public async Task<IActionResult>_UpdateAmount(int id)
+        {
+            var data = await _repo.GetOneAsync<Color,UpdateAmount>(id, u => new UpdateAmount
+            {
+                Id = u.Id,
+                Amount = u.Amount,
+                ColorName = u.ColorName,
+                IdProduct=u.IdProduct
+            });
+            return PartialView(data);
+        }
+        [HttpPost]
+        public async Task<IActionResult> _UpdateAmount(UpdateAmount model)
+        {
+            var data = await _repo.FindAsync<Color>(model.Id);
+            var tong=data.Amount + model.Amount;
+            _mapper.Map<UpdateAmount, Color>(model, data);
+            data.Amount = tong;
+            await _repo.UpdateAsync(data);
+            var product=await _repo.FindAsync<Product>(model.IdProduct);
+            product.Amount += model.Amount;
+            await _repo.UpdateAsync(product);
+            return Ok(true);
+
         }
     }
 }

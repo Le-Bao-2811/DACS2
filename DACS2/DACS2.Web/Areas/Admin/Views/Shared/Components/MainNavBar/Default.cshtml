@@ -15,6 +15,13 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Home" asp-area="null"
+                       class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <p class="text-nowrap">Trang client</p>
+                    </a>
+                </li>
                 @foreach (var item in Model.Items)
                 {
                     if (!User.IsInPermission(item.Permission))
@@ -74,12 +81,12 @@
                 }
 
                 <li class="nav-item">
-                        <a asp-action="Logout" asp-controller="Account" 
-                           class="nav-link">
-                            <i class="fas fa-sign-out-alt"></i>
-                            <p class="text-nowrap">Đăng xuất</p>
-                        </a>
-                   </li>
+                    <a asp-action="Logout" asp-controller="Account"
+                       class="nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <p class="text-nowrap">Đăng xuất</p>
+                    </a>
+                </li>
 
             </ul>
         </nav>
