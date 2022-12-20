@@ -102,7 +102,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Controller = "CategoryProduct",
                             DisplayText = "Thể loại sản phẩm",
                             Icon = "fa-product-hunt",
-                            Permission = AuthConst.News.VIEW_LIST
+                            Permission = AuthConst.CategoryProduct.VIEW_LIST
                         },
                           new MenuItem
                         {
@@ -110,7 +110,7 @@ namespace DACS2.Web.Areas.Admin.Components.MainNavBar
                             Controller = "Product",
                             DisplayText = "Sản phẩm",
                             Icon = "fa-tshirt",
-                            Permission = AuthConst.News.VIEW_LIST
+                            Permission = AuthConst.Product.VIEW_LIST
                         },
 
                     }

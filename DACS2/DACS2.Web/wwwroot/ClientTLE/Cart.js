@@ -104,6 +104,7 @@ $(document).on("click", ".add-cart", function (ev) {
     var color = "";
     var selected = $("input[type='radio'][name='size']:checked");
     var idadd = current.getAttribute('data-id');
+    idadd = parseInt(idadd);
     $.get("/cart/getOneProduct/" + idadd, (data) => {
         if (data.amount < amount) {
             new AWN().alert('Số lượng còn lại trong kho không đủ', { durations: { success: 0 }, labels: { alert: "Thao tác thất bại" } })

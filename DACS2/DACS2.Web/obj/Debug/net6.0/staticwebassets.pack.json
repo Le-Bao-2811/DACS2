@@ -493,6 +493,22 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\emailTemplate\\InfoNewMessager.html",
+      "PackagePath": "staticwebassets\\emailTemplate\\InfoNewMessager.html"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\emailTemplate\\emailSuccess.html",
+      "PackagePath": "staticwebassets\\emailTemplate\\emailSuccess.html"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\emailTemplate\\emailSuccessOrder.html",
+      "PackagePath": "staticwebassets\\emailTemplate\\emailSuccessOrder.html"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\emailTemplate\\emailTemplate.html",
+      "PackagePath": "staticwebassets\\emailTemplate\\emailTemplate.html"
+    },
+    {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -663,6 +679,30 @@
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\d0c10369-0b96-4c51-b10f-740de02912-11-2022-14-16-34-397.jpg",
       "PackagePath": "staticwebassets\\img\\products\\d0c10369-0b96-4c51-b10f-740de02912-11-2022-14-16-34-397.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3809176301614_8964c796ba29aa24f06-12-2022-13-37-26-782.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\z3809176301614_8964c796ba29aa24f06-12-2022-13-37-26-782.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3809176315246_ac81f3800ab91228506-12-2022-13-37-26-827.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\z3809176315246_ac81f3800ab91228506-12-2022-13-37-26-827.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3809176328964_7648a98d3be04f70306-12-2022-13-37-26-821.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\z3809176328964_7648a98d3be04f70306-12-2022-13-37-26-821.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3809176459013_1d5268ccbda6a471106-12-2022-13-37-26-813.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\z3809176459013_1d5268ccbda6a471106-12-2022-13-37-26-813.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3809176463929_c5844d18ecbb82d9006-12-2022-13-37-26-806.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\z3809176463929_c5844d18ecbb82d9006-12-2022-13-37-26-806.jpg"
+    },
+    {
+      "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3809176491457_36ee7ed9bee52c36806-12-2022-13-37-26-796.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\z3809176491457_36ee7ed9bee52c36806-12-2022-13-37-26-796.jpg"
     },
     {
       "Id": "D:\\DACS2\\BE\\DACS2\\DACS2\\DACS2.Web\\wwwroot\\img\\products\\z3835472826961_cf43b0606f120c89d04-12-2022-20-22-57-364.jpg",

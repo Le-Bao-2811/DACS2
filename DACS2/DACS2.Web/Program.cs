@@ -2,9 +2,11 @@
 using DACS2.Data;
 using DACS2.Data.Reponsitory;
 using DACS2.Share.Consts;
+using DACS2.Web.Common.Mailler;
 using DACS2.Web.WebConfig;
 using DACS2.Web.WebConfig.Const;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +33,11 @@ var mapperConfig = new MapperConfiguration(config =>
 {
     config.AddProfile(new MapperConfig());
 });
+// Khởi tạo thông tin mail
+AppMailConfiguration mailConfig = new();
+mailConfig.LoadFromConfig(builder.Configuration);
+builder.Services.AddSingleton(mailConfig);
+//
 IMapper mapper = mapperConfig.CreateMapper();
 builder.Services.AddSingleton(mapper);
 var app = builder.Build();
@@ -77,4 +84,4 @@ app.UseEndpoints(endpoints =>
     });
 });
 
-app.Run();
+    app.Run();

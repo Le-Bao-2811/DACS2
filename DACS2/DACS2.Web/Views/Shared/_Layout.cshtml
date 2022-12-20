@@ -41,17 +41,12 @@
                 <form asp-action="AllProduct" asp-controller="Home">
                     <div class="input-group">
                         <input name="search" type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
-                        </div>
                     </div>
                 </form>
             </div>
             <div class="col-lg-4 col-6 text-right">
-                <p class="m-0">Customer Service</p>
-                <h5 class="m-0">+012 345 6789</h5>
+                <p class="m-0">Số điện thoại</p>
+                <h5 class="m-0">0522995259</h5>
             </div>
         </div>
     </div>
@@ -82,7 +77,8 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Xin chào @User.Identity.Name</a>
                                         <ul class="dropdown-menu">
-                                            @if (User.IsInPermission(AuthConst.Product.UPDATE))
+
+                                            @if (Convert.ToInt32(User.Claims.SingleOrDefault(c => c.Type.Contains(AppClaimType.RoleId))?.Value)!=2)
                                             {
                                                 <li>
                                                     <a asp-action="Index" asp-controller="Home" asp-area="Admin" class="dropdown-item">
@@ -160,7 +156,7 @@
                 <p class="mb-4">
                     Đến shop để tìm những sản phẩm ưng ý nhất
                 </p>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>22 đường 30/4, p.Xuân Khánh,q.Ninh Kiều,tp.Cần Thơ</p>
+                <a class="mb-2" href="https://goo.gl/maps/RQ6YgkyoUVbd5PjH7"><i class="fa fa-map-marker-alt text-primary mr-3"></i>22 đường 30/4, p.Xuân Khánh,q.Ninh Kiều,tp.Cần Thơ</a>
                 <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>letranhoaibao2811@gmail.com</p>
                 <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>0522995259</p>
             </div>
@@ -172,8 +168,8 @@
                             <vc:list-policy-view-components />
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
         </div>

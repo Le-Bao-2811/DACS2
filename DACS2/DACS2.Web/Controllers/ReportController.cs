@@ -22,9 +22,6 @@ namespace DACS2.Web.Controllers
         {
             var data= _mapper.Map<Report>(model);
             data.Status=false;
-            var split=data.ReportContent.Split("<p>");
-            split = split[1].Split("</p>");
-            data.ReportContent = split[0];
             await _repo.AddAsync(data);
             SetSuccessMesg("Cảm ơn bạn đã phản hồi");
             return RedirectToAction("Index","Home");

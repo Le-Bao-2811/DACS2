@@ -569,3 +569,8 @@ D:\DACS2\BE\DACS2\DACS2\DACS2.Web\bin\Debug\net6.0\Microsoft.Extensions.Dependen
 D:\DACS2\BE\DACS2\DACS2\DACS2.Web\obj\Debug\net6.0\DACS2.Web.MvcApplicationPartsAssemblyInfo.cs
 D:\DACS2\BE\DACS2\DACS2\DACS2.Web\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
 D:\DACS2\BE\DACS2\DACS2\DACS2.Web\bin\Debug\net6.0\X.PagedList.Web.Common.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Web\bin\Debug\net6.0\MailKit.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Web\bin\Debug\net6.0\MimeKit.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Web\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Web\bin\Debug\net6.0\System.Web.Razor.dll
+D:\DACS2\BE\DACS2\DACS2\DACS2.Web\bin\Debug\net6.0\RazorEngine.dll
